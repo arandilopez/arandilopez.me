@@ -39,6 +39,13 @@ page '/*.txt', layout: false
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ?
+    "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail" :
+    "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+  source: ".tmp/dist",
+  latency: 1
 
 configure :build do
   activate :minify_css
