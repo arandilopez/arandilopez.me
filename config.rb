@@ -16,10 +16,11 @@ activate :external_pipeline,
   latency: 1
 
 configure :build do
-  activate :minify_css
-  activate :minify_javascript
+  activate :minify_css, inline: true
+  activate :minify_javascript, inline: true
   activate :asset_hash
   activate :imageoptim
+  activate :gzip
 end
 
 activate :livereload
