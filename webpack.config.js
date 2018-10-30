@@ -11,7 +11,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + '/.tmp/dist',
+    path: __dirname + '/.tmp/dist', // middleman output dir
     filename: '[name].js'
   },
 
@@ -22,9 +22,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader"
       },
-
+      // sass or scss
       {
-        test: /\.scss$/,
+        test: /\.s(a|c)ss$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: ['css-loader', {
@@ -42,7 +42,7 @@ module.exports = {
       },
       // Load plain-ol' vanilla CSS
       { test: /\.css$/, loader: "style!css" },
-
+      // fonts
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
         loader: 'url-loader',
