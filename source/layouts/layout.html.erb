@@ -4,17 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Personal page and resume">
+  <meta name="description" content="<%= current_page.data.description || "This is my personal page!" %>">
   <meta name="author" content="Arandi López">
   <%= partial 'partials/favicons' %>
   <link rel="manifest" href="/favicon/manifest.json">
   <%= partial 'partials/og' %>
   <title><%= current_page.data.title || "Arandi Lopez" %></title>
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Open+Sans" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Open+Sans" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
   </noscript>
@@ -23,10 +21,14 @@
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "site", async: 'async' %>
 </head>
-<body id="page-top">
-  <%= partial 'partials/navbar' %>
-  <div class="container-fluid p-0">
-    <%= yield %>
+<body id="page-top" class="font-sans text-black leading-tight">
+  <div id="app" class="py-8 lg:py-16 px-8 md:px-16 lg:px-24">
+    <div class="relative z-20 flex justify-between items-center">
+      <%= partial 'partials/navbar' %>
+    </div>
+    <div class="lg:pl-32 mt-12">
+      <%= yield %>
+    </div>
   </div>
 </body>
 </html>
