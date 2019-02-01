@@ -1,7 +1,8 @@
-const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const inProduction = (process.env.NODE_ENV == 'production');
+const tailwindcss = require('tailwindcss');
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
   entry: {
@@ -32,8 +33,12 @@ module.exports = {
             options: {
               plugins: () => { // post css plugins, can be exported to postcss.config.js
                 return [
+                  tailwindcss('./tailwind.js'),
                   require('precss'),
-                  require('autoprefixer')
+                  require('autoprefixer'),
+                  // purgecss({
+                  //   content: ['./**/*.html.erb', './**/*.html']
+                  // })
                 ];
               }
             }
