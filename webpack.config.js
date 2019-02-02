@@ -3,17 +3,23 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const inProduction = (process.env.NODE_ENV == 'production');
 const tailwindcss = require('tailwindcss');
 const purgecss = require('@fullhuman/postcss-purgecss');
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
+}
 
 module.exports = {
   entry: {
     site: [
       __dirname + '/source/javascripts/site.js',
       __dirname + '/source/stylesheets/site.scss'
-    ]
+    ],
   },
   output: {
     path: __dirname + '/.tmp/dist', // middleman output dir
-    filename: '[name].js'
+    filename: '[name].js',
+    chunkFilename: '[name]-[chunkhash].js'
   },
 
   module: {
@@ -36,9 +42,16 @@ module.exports = {
                   tailwindcss('./tailwind.js'),
                   require('precss'),
                   require('autoprefixer'),
-                  // purgecss({
-                  //   content: ['./**/*.html.erb', './**/*.html']
-                  // })
+                  purgecss({
+                    content: ['./source/**/*.html.erb', './source/**/*.html'],
+                    whitelistPatterns: [/^overflow/, /^scrolling/, /^pin/],
+                    extractors: [
+                      {
+                        extractor: TailwindExtractor,
+                        extensions: ["html", "erb", "html.erb", "js", "vue"]
+                      }
+                    ]
+                  }),
                 ];
               }
             }
@@ -59,7 +72,13 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource),
+    }),
+
     new ExtractTextPlugin("[name].css"),
+
     new webpack.LoaderOptionsPlugin({
       minimize: inProduction
     })
