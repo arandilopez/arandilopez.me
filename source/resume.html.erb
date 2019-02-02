@@ -1,11 +1,24 @@
 ---
-title: Resumen :: Arandi López
+title: Resume => Arandi López
 description: My resume
 ---
-<section class="resume-section lg:text-lg text-base mb-10" id="experience">
-  <div class="my-auto">
-    <h2 class="mb-5 text-black font-bold uppercase">Experience</h2>
-    <% data.exp.each do |experience| %>
+<article class="">
+  <section class="resume-section mb-10" id="interests">
+    <div class="my-auto">
+      <h2 class="mb-5 text-black font-bold uppercase">Interests</h2>
+      <div class="resume-item mb-5">
+        <div class="resume-content">
+          <p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="resume-section mb-10" id="experience">
+    <div class="my-auto">
+      <h2 class="mb-5 text-black font-bold uppercase">Experience</h2>
+      <% data.exp.each do |experience| %>
       <div class="resume-item mb-5">
         <div class="resume-content">
           <h3 class="mb-0"> <%= experience.role %> </h3>
@@ -20,95 +33,96 @@ description: My resume
           <span class="text-sm text-grey-darker"> <%= experience.date %> </span>
         </div>
       </div>
-    <% end %>
-  </div>
-</section>
-
-<section class="resume-section lg:text-lg text-base mb-10" id="education">
-  <div class="my-auto">
-    <h2 class="mb-5 text-black font-bold uppercase">Education</h2>
-
-    <div class="resume-item">
-      <div class="resume-content">
-        <h3 class="mb-0">
-          <i class="fas fa-graduation-cap text-primary"></i>
-          Universidad Autónoma de Yucatán
-        </h3>
-        <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Software Engineering</div>
-        <p>
-          Major in Web Development
-        </p>
-      </div>
-      <div class="resume-date">
-        <span class="text-sm text-grey-darker">January 2011 - Agoust 2015</span>
-      </div>
+      <% end %>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="resume-section mb-10" id="education">
+    <div class="my-auto">
+      <h2 class="mb-5 text-black font-bold uppercase">Education</h2>
+
+      <div class="resume-item">
+        <div class="resume-content">
+          <h3 class="mb-0">
+            <i class="fas fa-graduation-cap text-primary"></i>
+            Universidad Autónoma de Yucatán
+          </h3>
+          <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Software Engineering</div>
+          <p>
+            Major in Web Development
+          </p>
+        </div>
+        <div class="resume-date">
+          <span class="text-sm text-grey-darker">January 2011 - Agoust 2015</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
-<section class="resume-section lg:text-lg text-base mb-10" id="skills">
-  <div class="my-auto">
-    <h2 class="mb-5 text-black font-bold uppercase">Skills</h2>
+  <section class="resume-section mb-10" id="skills">
+    <div class="my-auto">
+      <h2 class="mb-5 text-black font-bold uppercase">Skills</h2>
 
-    <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Programming Languages &amp; Tools</div>
-    <ul class="list-reset inline-flex justify-between">
-      <% data.skills.tools.each do |tool| %>
+      <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Programming Languages &amp; Tools</div>
+      <ul class="list-reset inline-flex justify-between">
+        <% data.skills.tools.each do |tool| %>
         <li class="flex-1 list-inline-item mr-2 lg:text-5xl sm:text-xl text-2xl text-grey-darker hover:text-black">
           <i class="devicons devicons-<%= tool %>"></i>
         </li>
-      <% end %>
-    </ul>
+        <% end %>
+      </ul>
 
-    <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Workflow</div>
-    <ul class="fa-ul mb-0 text-grey-darkest">
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Mobile-First, Responsive Design
-      </li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Software Testing &amp; Debugging
-      </li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Agile Development
-      </li>
-    </ul>
-  </div>
-</section>
+      <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Workflow</div>
+      <ul class="fa-ul mb-0 text-grey-darkest">
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Mobile-First, Responsive Design
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Software Testing &amp; Debugging
+        </li>
+        <li>
+          <i class="fa-li fa fa-check"></i>
+          Agile Development
+        </li>
+      </ul>
+    </div>
+  </section>
 
-<section class="resume-section lg:text-lg text-base" id="awards">
-  <div class="my-auto">
-    <h2 class="mb-5 font-bold text-black uppercase">Awards &amp; Mentions</h2>
-    <ul class="fa-ul mb-0 text-grey-darkest">
-      <li class="mb-3">
-        <i class="fa-li fa fa-trophy text-yellow-dark"></i>
-        University Merit Award in Software Engineering, at Universidad Autónoma de Yucatán, 2014
-      </li>
-      <div class="subheading mb-3">Having taught</div>
-      <li>
-        <i class="fa-li fas fa-certificate text-yellow-dark"></i>
-        Starting with GNU/Linux in 2013 &amp; 2014 at UMT and FMAT
-      </li>
-      <li>
-        <i class="fa-li fas fa-certificate text-yellow-dark"></i>
-        Starting with Angular.js in 2014 at FMAT UADY
-      </li>
-      <li>
-        <i class="fa-li fas fa-certificate text-yellow-dark"></i>
-        Git in 2015 &amp; 2016 at FMAT UADY
-      </li>
-      <li class="mb-3">
-        <i class="fa-li fas fa-certificate text-yellow-dark"></i>
-        Introduction to Web Development in 2016 at FMAT UADY
-      </li>
-      <div class="subheading mb-3">Having directed</div>
-      <li class="mb-3">
-        <i class="fa-li fas fa-certificate text-yellow-dark"></i>
-        #AppChallenge FMAT in 2014, 2015 &amp; 2016
-      </li>
-    </ul>
-  </div>
-</section>
+  <section class="resume-section" id="awards" style="page-break-before: always;">
+    <div class="my-auto">
+      <h2 class="mb-5 font-bold text-black uppercase">Awards &amp; Mentions</h2>
+      <ul class="fa-ul mb-0 text-grey-darkest">
+        <li class="mb-3">
+          <i class="fa-li fa fa-trophy text-yellow-dark"></i>
+          University Merit Award in Software Engineering, at Universidad Autónoma de Yucatán, 2014
+        </li>
+        <div class="subheading mb-3 font-semibold uppercase">Having taught</div>
+        <li>
+          <i class="fa-li fas fa-certificate text-yellow-dark"></i>
+          Starting with GNU/Linux in 2013 &amp; 2014 at UMT and FMAT
+        </li>
+        <li>
+          <i class="fa-li fas fa-certificate text-yellow-dark"></i>
+          Starting with Angular.js in 2014 at FMAT UADY
+        </li>
+        <li>
+          <i class="fa-li fas fa-certificate text-yellow-dark"></i>
+          Git in 2015 &amp; 2016 at FMAT UADY
+        </li>
+        <li class="mb-3">
+          <i class="fa-li fas fa-certificate text-yellow-dark"></i>
+          Introduction to Web Development in 2016 at FMAT UADY
+        </li>
+        <div class="subheading mb-3 font-semibold uppercase">Having directed</div>
+        <li class="mb-3">
+          <i class="fa-li fas fa-certificate text-yellow-dark"></i>
+          #AppChallenge FMAT in 2014, 2015 &amp; 2016
+        </li>
+      </ul>
+    </div>
+  </section>
+</article>
