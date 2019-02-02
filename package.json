@@ -31,5 +31,6 @@
     "webpack-dev-server": ">=3.1.11"
   },
   "dependencies": {
+    "vue": "^2.5.22"
   }
 }
