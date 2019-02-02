@@ -26,3 +26,16 @@ configure :build do
 end
 
 activate :livereload
+
+helpers do
+  def nav_link(text, url, options = {})
+    options[:class] ||= ""
+    if current_page.url.match? url
+      klass = options[:class]
+      klass.gsub!('text-grey-dark', '')
+      klass << ' text-black'
+      options[:class] = klass
+    end
+    link_to text, url, options
+  end
+end
