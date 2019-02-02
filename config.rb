@@ -1,4 +1,5 @@
-# Time.zone = "Mexico City"
+require "uglifier"
+
 activate :directory_indexes
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -19,7 +20,7 @@ activate :external_pipeline,
 
 configure :build do
   activate :minify_css, inline: true
-  activate :minify_javascript, inline: true
+  activate :minify_javascript, inline: true, compressor: -> { Uglifier.new(harmony: true) }
   activate :asset_hash
   activate :imageoptim
   activate :gzip
