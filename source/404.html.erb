@@ -11,18 +11,7 @@ directory_index: false
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>404: Page not found</title>
     <%= partial 'partials/favicons' %>
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Open+Sans" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Open+Sans" rel="stylesheet">
-      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
-    </noscript>
-    <link href='https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css' rel='stylesheet'>
-    <%= partial 'partials/loadcsspreload' %>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site", async: 'async' %>
     <style media="screen">
     body {
       padding: 0;
@@ -33,15 +22,13 @@ directory_index: false
     </style>
   </head>
   <body>
-    <div class="page-wrap d-flex flex-row align-items-center">
+    <div class="page-wrap flex justify-center items-center">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <h1 class="display-1 d-block text-primary">404</h1>
-                    <div class="mb-4 lead">Oops! The page you are looking for was not found.</div>
-                    <%= link_to "Back to Home", "/", class: "btn btn-link" %>
-                </div>
-            </div>
+          <div class="text-center">
+              <h1 class="text-3xl block text-black">404</h1>
+              <div class="my-4 leading-tight">Oops! The page you are looking for was not found.</div>
+              <%= link_to "&laquo; Back to Home", "/", class: "text-black no-underline" %>
+          </div>
         </div>
     </div>
   </body>
