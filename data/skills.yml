@@ -1,12 +1,12 @@
 tools:
-  - php
-  - laravel
   - ruby
   - ruby_on_rails
+  - php
+  - laravel
   - vue
   - html5
   - sass
   - atom
   - git
   - linux
-  - apple 
+  - apple
