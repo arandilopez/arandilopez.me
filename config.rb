@@ -1,13 +1,15 @@
 require "uglifier"
 
-activate :directory_indexes
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+set :markdown, input: 'GFM'
 
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+activate :directory_indexes
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
+end
 
 # Build-specific configuration
 activate :external_pipeline,
@@ -18,6 +20,17 @@ activate :external_pipeline,
   source: ".tmp/dist",
   latency: 1
 
+activate :blog do |blog|
+  Time.zone = "Mexico City"
+  blog.prefix = 'articles'
+  blog.layout = 'article'
+  blog.paginate = true
+  blog.per_page = 20
+end
+
+
+activate :livereload
+
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript, inline: true, compressor: -> { Uglifier.new(harmony: true) }
@@ -25,8 +38,6 @@ configure :build do
   activate :imageoptim
   activate :gzip
 end
-
-activate :livereload
 
 helpers do
   def nav_link(text, url, options = {})
