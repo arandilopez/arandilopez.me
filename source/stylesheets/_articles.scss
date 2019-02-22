@@ -1,0 +1,49 @@
+.article h2 {
+  @apply mb-3;
+}
+
+.article > p, .article > ol, .article > ul, .article > pre, .article > blockquote {
+  @apply mb-6;
+  @apply leading-normal;
+}
+
+.article > pre {
+  @apply font-mono;
+
+  code {
+    @apply py-4 px-6;
+  }
+}
+
+code {
+  @apply border border-solid border-grey-lighter rounded-sm font-mono text-black bg-grey-lightest;
+}
+
+.article a {
+  @apply text-grey-darkest;
+  &:hover {
+    @apply text-black;
+  }
+}
+
+.article > blockquote {
+  @apply border-l-2 border-solid border-grey-light;
+  @apply italic pl-8;
+}
+
+.article > hr {
+  @apply border-t border-grey-light border-solid;
+  @apply mb-6 mx-24;
+}
+
+.summary {
+  @apply mt-3;
+}
+
+.summary a {
+  @apply text-grey-darkest;
+
+  &:hover {
+    @apply text-black;
+  }
+}
