@@ -9,7 +9,7 @@
       <%= link_to "Arandi López", "/", class: "block text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight" %>
       <div class="hidden md:flex mt-3 lg:mt-4 uppercase tracking-wide text-xs">
         <%= nav_link "Resume", "/resume", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
-        <%#= link_to "Blog", "/blog", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
+        <%= nav_link "Articles", "/articles", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
       </div>
     </div>
   </div>
@@ -24,6 +24,6 @@
 <div style="display: none;" :class="menuOpen ? 'block' : 'hidden'" class="md:hidden z-10 bg-white fixed pin pt-24">
   <div class="spaced-y-8 overflow-y-auto pt-6 pb-8 px-12 max-h-full overflow-y-auto">
     <%= link_to "Resume", "/resume", class: "block text-black font-semibold no-underline" %>
-    <%#= link_to "Blog", "/blog", class: "block text-black font-semibold no-underline" %>
+    <%= link_to "Articles", "/articles", class: "block text-black font-semibold no-underline" %>
   </div>
 </div>
