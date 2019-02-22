@@ -50,4 +50,10 @@ helpers do
     end
     link_to text, url, options
   end
+
+  def post_url(page_id)
+    found = sitemap.find_resource_by_page_id(page_id)
+    return found.url if found
+    return ''
+  end
 end
