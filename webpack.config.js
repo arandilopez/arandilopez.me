@@ -8,6 +8,26 @@ class TailwindExtractor {
     return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
   }
 }
+let POSTCSS_PLUGINS = [
+  tailwindcss('./tailwind.js'),
+  require('precss'),
+  require('autoprefixer')
+]
+
+if (inProduction) {
+  POSTCSS_PLUGINS.push(
+    purgecss({
+      content: ['./source/**/*.html.erb', './source/**/*.html'],
+      whitelistPatterns: [/^overflow/, /^scrolling/, /^pin/],
+      extractors: [
+        {
+          extractor: TailwindExtractor,
+          extensions: ["html", "erb", "html.erb", "js", "vue"]
+        }
+      ]
+    })
+  )
+}
 
 module.exports = {
   entry: {
@@ -38,21 +58,7 @@ module.exports = {
             loader: 'postcss-loader', // Run post css actions
             options: {
               plugins: () => { // post css plugins, can be exported to postcss.config.js
-                return [
-                  tailwindcss('./tailwind.js'),
-                  require('precss'),
-                  require('autoprefixer'),
-                  purgecss({
-                    content: ['./source/**/*.html.erb', './source/**/*.html'],
-                    whitelistPatterns: [/^overflow/, /^scrolling/, /^pin/],
-                    extractors: [
-                      {
-                        extractor: TailwindExtractor,
-                        extensions: ["html", "erb", "html.erb", "js", "vue"]
-                      }
-                    ]
-                  }),
-                ];
+                return POSTCSS_PLUGINS;
               }
             }
           }, 'sass-loader']
