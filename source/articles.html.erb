@@ -1,0 +1,11 @@
+---
+title: Articles => Arandi López
+description: My articles
+---
+<section>
+  <% blog.articles.select { |a| a.data[:published] }.each do |article| %>
+  <article class="article">
+    <%= partial 'partials/demo_article', locals: {article: article} %>
+  </article>
+  <% end %>
+</section>
