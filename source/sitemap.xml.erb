@@ -8,7 +8,7 @@ directory_index: false
 <% pages.each do |page| %>
   <url>
     <loc>https://arandilopez.me/<%=page.destination_path.gsub('/index.html','')%></loc>
-    <% if page.date %>
+    <% if page&.date %>
       <lastmod><%= page.date.strftime('%Y-%m-%d') %></lastmod>
     <% end %>
     <priority>0.7</priority>
