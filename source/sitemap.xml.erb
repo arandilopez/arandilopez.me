@@ -5,9 +5,12 @@ directory_index: false
 <% pages = sitemap.resources.find_all{ |p| !p.source_file.nil? && p.source_file.match(/\.html/) && !p.data.sitemap_noindex } %>
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<% pages.each do |p| %>
+<% pages.each do |page| %>
   <url>
-    <loc>https://arandilopez.me/<%=p.destination_path.gsub('/index.html','')%></loc>
+    <loc>https://arandilopez.me/<%=page.destination_path.gsub('/index.html','')%></loc>
+    <% if page.date %>
+      <lastmod><%= page.date.strftime('%Y-%m-%d') %></lastmod>
+    <% end %>
     <priority>0.7</priority>
   </url>
 <% end %>

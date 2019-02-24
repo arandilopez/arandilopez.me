@@ -3,3 +3,4 @@
 
 User-agent: *
 Allow: /
+Sitemap: https://arandilopez.me/sitemap.xml
