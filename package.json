@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "webpack --watch",
+    "dev": "webpack --watch -d --progress --color",
     "serve": "webpack-dev-server --open",
-    "production": "NODE_ENV=production webpack"
+    "production": "NODE_ENV=production webpack --bail"
   },
   "keywords": [],
   "author": "Arandi Lopez",

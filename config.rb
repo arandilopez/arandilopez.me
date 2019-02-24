@@ -15,8 +15,8 @@ end
 activate :external_pipeline,
   name: :webpack,
   command: build? ?
-    "./node_modules/webpack/bin/webpack.js --bail" :
-    "./node_modules/webpack/bin/webpack.js --watch -d --progress --color",
+    "npm run production" :
+    "npm run dev",
   source: ".tmp/dist",
   latency: 1
 
@@ -24,8 +24,8 @@ activate :blog do |blog|
   Time.zone = "Mexico City"
   blog.prefix = 'articles'
   blog.layout = 'article'
-  blog.paginate = true
-  blog.per_page = 20
+  # blog.paginate = true
+  # blog.per_page = 20
 end
 
 
