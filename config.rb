@@ -41,6 +41,13 @@ configure :build do
 end
 
 helpers do
+  def articles(except: nil)
+    articles = blog.articles
+    articles = articles.select { |article| article.data.published } if build?
+    articles = articles.reject { |article| article == except } if except
+    articles
+  end
+
   def nav_link(text, url, options = {})
     options[:class] ||= ""
     if current_page.url.match? url

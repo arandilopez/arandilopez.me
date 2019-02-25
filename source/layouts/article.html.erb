@@ -37,7 +37,7 @@
           <%= yield %>
         </article>
         <hr class="border-t border-solid border-grey-light">
-        <% next_article = blog.articles.reject { |a| a == current_article }.sample %>
+        <% next_article = articles(except: current_article).sample %>
         <% if next_article %>
           <div class="mt-6">
             <h5>Next article:</h5>
