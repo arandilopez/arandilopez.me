@@ -1,6 +1,7 @@
 ---
 title: Articles
 description: My articles
+priority: 1
 ---
 <section>
   <% blog.articles.select { |a| a.data[:published] }.each do |article| %>
