@@ -3,6 +3,7 @@ title: Tips en C - Parte 1
 publics: true
 tags: c programming software pointers
 category: spanish
+lang: es
 ---
 
 C es un lenguaje de programación que es considerado como el lenguaje básico a aprender si estudias algún grado en computación. Fue el lenguaje que aprendí en el primer curso de programación de la Universidad, y hoy estoy retomando estos temas en mi maestría.
