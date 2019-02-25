@@ -6,6 +6,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :i18n
 activate :directory_indexes
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
