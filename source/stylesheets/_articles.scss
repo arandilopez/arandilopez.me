@@ -37,6 +37,11 @@ code {
   @apply mb-6 mx-24;
 }
 
+.article > img {
+  max-width: 100%;
+  height: auto;
+}
+
 .summary {
   @apply mt-3;
 }
