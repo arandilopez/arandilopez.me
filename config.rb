@@ -6,6 +6,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :i18n
 activate :directory_indexes
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -40,6 +41,13 @@ configure :build do
 end
 
 helpers do
+  def articles(except: nil)
+    articles = blog.articles
+    articles = articles.select { |article| article.data.published } if build?
+    articles = articles.reject { |article| article == except } if except
+    articles
+  end
+
   def nav_link(text, url, options = {})
     options[:class] ||= ""
     if current_page.url.match? url

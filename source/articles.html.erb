@@ -1,9 +1,10 @@
 ---
 title: Articles
 description: My articles
+priority: 1
 ---
 <section>
-  <% blog.articles.select { |a| a.data[:published] }.each do |article| %>
+  <% articles.each do |article| %>
   <article class="article">
     <%= partial 'partials/demo_article', locals: {article: article} %>
   </article>
