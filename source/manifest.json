@@ -1,0 +1,16 @@
+{
+  "name": "Arandi López",
+  "icons": [
+    {
+      "src": "\/android-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image\/png"
+    }
+  ],
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "display": "standalone",
+  "short_name": "Arandi López",
+  "start_url": "/",
+  "display": "standalone",
+}
