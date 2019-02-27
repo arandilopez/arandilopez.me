@@ -3,11 +3,12 @@ layout: false
 directory_index: false
 ---
 xml.instruct! :xml, :version => '1.0'
-xml.rss :version => "2.0" do
+xml.rss :version => "2.0", 'xmlns:atom' => 'http://www.w3.org/2005/Atom' do
   xml.channel do
     xml.title "Arandi López · Articles"
     xml.description "My articles"
     xml.link "https://arandilopez.me/articles"
+    xml.tag! 'atom:link', :rel => 'self', :type => 'application/rss+xml', :href => 'https://arandilopez.me/rss.xml'
 
     articles.each do |article|
       xml.item do
