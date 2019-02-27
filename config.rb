@@ -25,8 +25,6 @@ activate :blog do |blog|
   Time.zone = "Mexico City"
   blog.prefix = 'articles'
   blog.layout = 'article'
-  # blog.paginate = true
-  # blog.per_page = 20
 end
 
 
@@ -43,7 +41,7 @@ end
 helpers do
   def articles(except: nil)
     articles = blog.articles
-    articles = articles.select { |article| article.data.published } if build?
+    articles = articles.select { |article| article.published? } if build?
     articles = articles.reject { |article| article == except } if except
     articles
   end
