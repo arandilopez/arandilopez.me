@@ -7,8 +7,9 @@
   <meta name="description" content="<%= current_page.data.description || "My personal web page" %>">
   <meta name="author" content="Arandi López">
   <%= partial 'partials/favicons' %>
-  <link rel="manifest" href="/favicon/manifest.json">
+  <link rel="manifest" href="/manifest.json?id=001">
   <%= partial 'partials/og' %>
+  <link rel="alternate" type="application/atom+xml" title="Articles" href="/rss.xml" />
   <title><%= current_page.data.title || "Arandi Lopez" %></title>
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
