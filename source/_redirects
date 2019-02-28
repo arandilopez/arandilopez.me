@@ -1,0 +1,10 @@
+---
+layout: false
+directory_index: false
+---
+
+# Redirect domain aliases to primary domain
+https://arandilopez.dev/* https://arandilopez.me/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://arandilopez.netlify.com/* https://arandilopez.me/:splat 301!
