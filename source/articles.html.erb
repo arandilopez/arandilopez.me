@@ -5,7 +5,7 @@ priority: 1
 ---
 <section>
   <% articles.each do |article| %>
-  <article class="article">
+  <article>
     <%= partial 'partials/demo_article', locals: {article: article} %>
   </article>
   <% end %>

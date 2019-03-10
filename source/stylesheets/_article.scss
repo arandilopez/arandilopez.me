@@ -1,14 +1,14 @@
 /*! purgecss start ignore */
-.article h2 {
+.markdown h2 {
   @apply mb-3;
 }
 
-.article > p, .article > ol, .article > ul, .article > pre, .article > blockquote {
+.markdown > p, .markdown > ol, .markdown > ul, .markdown > pre, .markdown > blockquote {
   @apply mb-6;
   @apply leading-normal;
 }
 
-.article > pre {
+.markdown > pre {
   @apply font-mono;
 
   code {
@@ -20,24 +20,24 @@ code {
   @apply border border-solid border-grey-lighter rounded-sm font-mono text-black bg-grey-lightest;
 }
 
-.article a {
+.markdown a {
   @apply text-grey-darkest;
   &:hover {
     @apply text-black;
   }
 }
 
-.article > blockquote {
+.markdown > blockquote {
   @apply border-l-2 border-solid border-grey-light;
   @apply italic pl-8;
 }
 
-.article > hr {
+.markdown > hr {
   @apply border-t border-grey-light border-solid;
   @apply mb-6 mx-24;
 }
 
-.article img {
+.markdown img {
   max-width: 100%;
   height: auto;
 }
