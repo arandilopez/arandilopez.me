@@ -35,16 +35,20 @@
             <h1 class="text-4xl"><%= current_article.title %></h1>
             <time class="text-sm font-semibold uppercase text-grey-dark"><%= current_article.date.strftime('%B %e, %Y') %></time>
           </header>
-          <%= yield %>
+          <div class="markdown">
+            <%= yield %>
+          </div>
         </article>
-        <hr class="border-t border-solid border-grey-light">
-        <% next_article = articles(except: current_article).sample %>
-        <% if next_article %>
+        <div class="next-articles print:hidden">
+          <hr class="border-t border-solid border-grey-light">
+          <% next_article = articles(except: current_article).sample %>
+          <% if next_article %>
           <div class="mt-6">
             <h5>Next article:</h5>
             <%= partial 'partials/demo_article', locals: {article: next_article} %>
           </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
