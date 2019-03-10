@@ -5,6 +5,7 @@ set :markdown, input: 'GFM'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+proxy '/_redirects', 'redirects.txt', ignore: true
 
 activate :i18n
 activate :directory_indexes
