@@ -7,20 +7,11 @@
   <meta name="description" content="<%= current_article.data.description || current_article.summary %>">
   <meta name="author" content="Arandi López">
   <%= partial 'partials/favicons' %>
-  <link rel="manifest" href="/manifest.json?id=001">
+  <link rel="manifest" href="/manifest.json">
   <%= partial 'partials/og_article' %>
   <link rel="alternate" type="application/atom+xml" title="Articles" href="/rss.xml" />
   <title><%= current_article.data.title || "Arandi Lopez" %></title>
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
-  </noscript>
-  <link href='https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/atom-one-dark.min.css">
-  <%= partial 'partials/loadcsspreload' %>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/atom-one-dark.min.css">
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "vendor", defer: 'defer' %>
   <%= javascript_include_tag "site", defer: 'defer' %>

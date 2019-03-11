@@ -1,130 +1,95 @@
 ---
 title: Resume
-description: My resume
+description: Resume / CV
 priority: 1
 ---
-<article>
-  <section class="resume-section mb-10" id="interests">
-    <div class="my-auto">
-      <h2 class="mb-5 text-black font-bold uppercase">Interests</h2>
-      <div class="resume-item mb-5">
-        <div class="resume-content">
-          <p>
-            Now my focus is on gaining more experience in Ruby on Rails coding. I also aim to get into development
-            of machine learning and data science, learn python and continue my learning in R.
-          </p>
-        </div>
+<article class="resume">
+  <section class="resume-section" id="about-me">
+    <div class="resume-item">
+      <div class="resume-content">
+        <p>
+          Fullstack web developer interested in improving his development skills at companies in large-scale projects. He has a history of development of SaaS applications and tailored-made ERP systems. Regular contributor in open source projects. Interested in Data Science and Machine Learning topics.
+        </p>
       </div>
     </div>
   </section>
-  <section class="resume-section mb-10" id="experience">
-    <div class="my-auto">
-      <h2 class="mb-5 text-black font-bold uppercase">Experience</h2>
-      <% data.exp.each do |experience| %>
-      <div class="resume-item mb-5">
-        <div class="resume-content">
-          <h3 class="mb-0"> <%= experience.role %> </h3>
-          <div class="subheading mb-2">
-            <%= link_to experience.company, experience.link, target: '_blank', class: 'font-semibold uppercase text-grey-darkest no-underline' %>
+  <div class="print:flex">
+    <div class="main-info print:max-w-3/4">
+      <section class="resume-section" id="experience">
+        <h2 class="resume-section-title print:mb-3">Experience</h2>
+        <% data.exp.each do |experience| %>
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3 class="mb-0"> <%= experience.role %> </h3>
+            <div class="subheading">
+              <%= link_to experience.company, experience.link, target: '_blank', class: 'font-semibold uppercase text-grey-darkest no-underline' %>
+            </div>
+            <div class="resume-date mb-2">
+              <%= experience.date %>
+            </div>
+            <p>
+              <%= experience.description %>
+            </p>
           </div>
-          <p>
-            <%= experience.description %>
-          </p>
         </div>
-        <div class="resume-date">
-          <span class="text-sm text-grey-darker"> <%= experience.date %> </span>
-        </div>
-      </div>
-      <% end %>
-    </div>
-  </section>
-
-  <section class="resume-section mb-10" id="education">
-    <div class="my-auto">
-      <h2 class="mb-5 text-black font-bold uppercase">Education</h2>
-
-      <div class="resume-item">
-        <div class="resume-content">
-          <h3 class="mb-0">
-            <i class="fas fa-graduation-cap text-primary"></i>
-            Universidad Autónoma de Yucatán
-          </h3>
-          <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Software Engineering</div>
-          <p>
-            Major in Web Development
-          </p>
-        </div>
-        <div class="resume-date">
-          <span class="text-sm text-grey-darker">January 2011 - Agoust 2015</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="resume-section mb-10" id="skills">
-    <div class="my-auto">
-      <h2 class="mb-5 text-black font-bold uppercase">Skills</h2>
-
-      <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Programming Languages &amp; Tools</div>
-      <ul class="list-reset inline-flex justify-between">
-        <% data.skills.tools.each do |tool| %>
-        <li class="flex-1 list-inline-item mr-2 lg:text-5xl sm:text-xl text-2xl text-grey-darker hover:text-black">
-          <i class="devicons devicons-<%= tool %>"></i>
-        </li>
         <% end %>
-      </ul>
+      </section>
 
-      <div class="subheading mb-2 font-semibold uppercase text-grey-darkest">Workflow</div>
-      <ul class="fa-ul mb-0 text-grey-darkest">
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Mobile-First, Responsive Design
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Software Testing &amp; Debugging
-        </li>
-        <li>
-          <i class="fa-li fa fa-check"></i>
-          Agile Development
-        </li>
-      </ul>
+      <section class="resume-section print:mb-0" id="education">
+        <h2 class="resume-section-title print:mb-3">Education</h2>
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3>Universidad Autónoma de Yucatán</h3>
+            <div class="subheading">Software Engineering</div>
+            <div class="resume-date mb-2">
+              <span class="text-sm text-grey-darker">January 2011 - Agoust 2015</span>
+            </div>
+            <p>
+              <ul>
+                <li>
+                  Implemented falculty’s  moodle mobile application.
+                </li>
+                <li>
+                  Gave several workshops in technologies like: Git, AngularJS, Web Development, Linux.
+                </li>
+                <li>
+                  Co-organized App Challenge hackathons in 2014, 2015, and 2016.
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
 
-  <section class="resume-section" id="awards">
-    <div class="my-auto">
-      <h2 class="mb-5 font-bold text-black uppercase">Awards &amp; Mentions</h2>
-      <ul class="fa-ul mb-0 text-grey-darkest">
-        <li class="mb-3">
-          <i class="fa-li fa fa-trophy text-black"></i>
-          University Merit Award in Software Engineering, at Universidad Autónoma de Yucatán, 2014
-        </li>
-        <div class="subheading mb-3 font-semibold uppercase">Having taught</div>
-        <li>
-          <i class="fa-li fas fa-certificate text-black"></i>
-          Starting with GNU/Linux in 2013 &amp; 2014 at UMT and FMAT
-        </li>
-        <li>
-          <i class="fa-li fas fa-certificate text-black"></i>
-          Starting with Angular.js in 2014 at FMAT UADY
-        </li>
-        <li>
-          <i class="fa-li fas fa-certificate text-black"></i>
-          Git in 2015 &amp; 2016 at FMAT UADY
-        </li>
-        <li class="mb-3">
-          <i class="fa-li fas fa-certificate text-black"></i>
-          Introduction to Web Development in 2016 at FMAT UADY
-        </li>
-        <div class="subheading mb-3 font-semibold uppercase">Having directed</div>
-        <li class="mb-3">
-          <i class="fa-li fas fa-certificate text-black"></i>
-          #AppChallenge FMAT in 2014, 2015 &amp; 2016
-        </li>
-      </ul>
+    <div class="aside-info print:ml-8">
+      <section class="resume-section" id="skills">
+        <h2 class="resume-section-title print:mb-3">Skills</h2>
+
+        <h3 class="mb-2">Web Technologies &amp; Frameworks</h3>
+        <p class="mb-2">
+          Ruby on Rails, Laravel, VueJS, AngularJS
+        </p>
+        <h3 class="mb-2">Programming Languages</h3>
+        <p class="mb-2">
+          Ruby, PHP, Javascript, Java, Python
+        </p>
+        <h3 class="mb-2">Databases</h3>
+        <p class="mb-2">
+          PostgreSQL, MySQL, SQL Server
+        </p>
+        <h3 class="mb-2">Versioning</h3>
+        <p>
+           Git &amp; SVN
+        </p>
+      </section>
+
+      <section class="resume-section" id="awards">
+        <h2 class="resume-section-title print:mb-3">Awards</h2>
+        <p>
+          <strong>University Merit Award</strong> in Software Engineering, at Universidad Autónoma de Yucatán, 2014
+        </p>
+      </section>
     </div>
-  </section>
+  </div>
 </article>

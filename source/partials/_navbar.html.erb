@@ -6,9 +6,19 @@
       </a>
     </div>
     <div>
-      <%= link_to "Arandi López", "/", class: "block text-black no-underline font-bold text-xl lg:text-3xl print:text-5xl font-extrabold leading-none lg:leading-tight" %>
+      <% link_to("/", class: "block text-black no-underline font-bold text-xl lg:text-3xl print:text-4xl font-extrabold leading-none lg:leading-tight") do %>
+        Arandi López
+      <% end %>
 
-      <div class="hidden md:flex mt-3 lg:mt-4 uppercase tracking-wide text-xs">
+      <% if current_page.page_id == 'resume' %>
+        <div class="hidden print:block mt-3 text-grey-darkest">
+          51st street #781-E, Sol Caucel. Mérida, YUC.
+          <br>
+          <%= mail_to 'hello@arandilopez.dev', "hello@arandilopez.dev", class: "text-grey-darkest no-underline" %>
+        </div>
+      <% end %>
+
+      <div class="hidden md:flex mt-3 lg:mt-4 uppercase text-xs">
         <%= nav_link "Resume", "/resume", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
         <%= nav_link "Articles", "/articles", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
       </div>

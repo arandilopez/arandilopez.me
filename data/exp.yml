@@ -1,17 +1,17 @@
-- company: Box Factura
-  link: https://www.boxfactura.com
+- company: OSOM Marketing Digital
+  link: https://www.osom.so
   role: Software Engineer
-  description: Refactoring and maintenance. New features Development
+  description: Mostly working in Box Factura, a SaaS application for bills control and  accounting tools that decrease time in administration and achieve client satisfaction.
   date: March 2017 - Present
 
 - company: 789MX
   link: https://789.mx
   role: Web Developer
-  description: Design and development of custom ERP systems
+  description: Worked on several ERP systems projects made to order to facilitate warehouse processes.
   date: July 2015 - March 2017
 
 - company: LogicSystems
   link: https://www.logicsystems.com.mx
   role: Junior Developer
-  description: Development of web and mobile applications e-SIGeN
+  description: Worked in the development of e-SIGEN, a SaaS application for Mexican public notaries control.
   date: June 2014 - July 2015

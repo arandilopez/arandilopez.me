@@ -4,21 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="<%= current_page.data.description || "My personal web page" %>">
+  <meta name="description" content="<%= current_page.data.description || "Personal web page" %>">
   <meta name="author" content="Arandi López">
+  <title><%= current_page.data.title || "Arandi Lopez" %></title>
   <%= partial 'partials/favicons' %>
-  <link rel="manifest" href="/manifest.json?id=001">
+  <link rel="manifest" href="/manifest.json">
   <%= partial 'partials/og' %>
   <link rel="alternate" type="application/atom+xml" title="Articles" href="/rss.xml" />
-  <title><%= current_page.data.title || "Arandi Lopez" %></title>
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
-  </noscript>
-  <link href='https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css' rel='stylesheet'>
-  <%= partial 'partials/loadcsspreload' %>
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "vendor", defer: 'defer' %>
   <%= javascript_include_tag "site", defer: 'defer' %>
@@ -26,8 +18,8 @@
 <body id="page-top" class="font-sans text-black leading-tight">
   <div id="app" class="py-8 lg:py-16 px-6 md:px-16 lg:px-24">
     <%= partial 'partials/navbar' %>
-    <div class="lg:pl-32 mt-12">
-      <div class="max-w-md">
+    <div class="lg:pl-32 mt-12 print:mt-6">
+      <div class="max-w-lg">
         <%= yield %>
       </div>
     </div>

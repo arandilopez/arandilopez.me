@@ -1,0 +1,25 @@
+/*! purgecss start ignore */
+.resume {
+  @apply my-auto;
+}
+
+.resume-section {
+  @apply mb-10;
+}
+
+.resume-section-title {
+  @apply mb-5 text-grey-darkest text-sm font-bold uppercase;
+}
+
+.subheading {
+  @apply font-semibold uppercase;
+}
+
+.resume-item {
+  @apply mb-5;
+}
+
+.resume-date {
+  @apply text-sm text-grey-darker;
+}
+/*! purgecss end ignore */
