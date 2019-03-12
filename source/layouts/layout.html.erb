@@ -12,8 +12,6 @@
   <%= partial 'partials/og' %>
   <link rel="alternate" type="application/atom+xml" title="Articles" href="/rss.xml" />
   <%= stylesheet_link_tag "site" %>
-  <%# javascript_include_tag "vendor", defer: 'defer' %>
-  <%= javascript_include_tag "site", defer: 'defer' %>
 </head>
 <body id="page-top" class="font-sans text-black leading-tight">
   <div id="app" class="py-8 lg:py-16 px-6 md:px-16 lg:px-24">
@@ -24,5 +22,14 @@
       </div>
     </div>
   </div>
+
+  <script>
+   if (!navigator.serviceWorker.controller) {
+       navigator.serviceWorker.register("/sw.js").then(function(reg) {
+           console.log("Service worker has been registered for scope: " + reg.scope);
+       });
+   }
+  </script>
+  <%= javascript_include_tag "site", defer: 'defer' %>
 </body>
 </html>
