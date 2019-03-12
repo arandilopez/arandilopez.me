@@ -9,7 +9,6 @@ module.exports = {
   module: {
     rules: [
       loaders.JSLoader,
-      loaders.ESLintLoader,
       loaders.CSSLoader
     ]
   },
