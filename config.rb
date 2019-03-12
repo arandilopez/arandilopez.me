@@ -2,9 +2,9 @@ require "uglifier"
 
 set :markdown, input: 'GFM'
 
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+page '/*.xml', layout: false, directory_index: false
+page '/*.json', layout: false, directory_index: false
+page '/*.txt', layout: false, directory_index: false
 proxy '/_redirects', 'redirects.txt', ignore: true
 
 activate :i18n

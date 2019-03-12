@@ -1,7 +1,3 @@
----
-layout: false
-directory_index: false
----
 pages = sitemap.resources.find_all{ |p|
   !p.source_file.nil? && p.source_file.match(/\.html/) && !p.data.sitemap_noindex
 }
