@@ -21,6 +21,7 @@ const PROD_PLUGINS = [
       __dirname + '/../source/**/*.html',
       __dirname + '/../source/**/*.erb'
     ],
+    whitelistPatterns: [/^overflow/, /^scrolling/, /^pin/],
     extractors: [{
       extractor: TailwindExtractor,
       extensions: ['html', 'js', 'erb', 'html.erb']
