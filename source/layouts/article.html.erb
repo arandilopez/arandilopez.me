@@ -24,6 +24,7 @@
         <article class="article">
           <header class="mb-8">
             <h1 class="text-4xl"><%= current_article.title %></h1>
+            <span class="hidden print:block text-sm text-grey-darkest">by Arandi López</span>
             <time class="text-sm font-semibold uppercase text-grey-dark"><%= current_article.date.strftime('%B %e, %Y') %></time>
           </header>
           <div class="markdown">
