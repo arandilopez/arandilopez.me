@@ -1,10 +1,10 @@
 ---
-title: Resume
+title: Arandi López - Resume
 description: Resume / CV
 priority: 1
 ---
 <article class="resume">
-  <section class="resume-section" id="about-me">
+  <section class="resume-section print:mb-5" id="about-me">
     <div class="resume-item">
       <div class="resume-content">
         <p>
@@ -15,7 +15,7 @@ priority: 1
   </section>
   <div class="print:flex">
     <div class="main-info print:max-w-3/4">
-      <section class="resume-section" id="experience">
+      <section class="resume-section print:mb-5" id="experience">
         <h2 class="resume-section-title print:mb-3">Experience</h2>
         <% data.exp.each do |experience| %>
         <div class="resume-item">
@@ -37,72 +37,36 @@ priority: 1
 
       <section class="resume-section print:mb-0" id="education">
         <h2 class="resume-section-title print:mb-3">Education</h2>
+        <% data.education.each do |education| %>
         <div class="resume-item">
           <div class="resume-content">
-            <h3>Universidad Autónoma de Yucatán</h3>
-            <div class="subheading">Software Engineering</div>
+            <h3><%= education.college %></h3>
+            <div class="subheading"><%= education.degree %></div>
             <div class="resume-date mb-2">
-              <span class="text-sm text-grey-darker">January 2011 - Agoust 2015</span>
+              <span class="text-sm text-grey-darker"><%= education.dates %></span>
             </div>
             <p>
               <ul>
-                <li>
-                  Implemented falculty’s  moodle mobile application.
-                </li>
-                <li>
-                  Gave several workshops in technologies like: Git, AngularJS, Web Development, Linux.
-                </li>
-                <li>
-                  Co-organized App Challenge hackathons in 2014, 2015, and 2016.
-                </li>
+                <% education.relevant_achievements.each do |achievement| %>
+                  <li><%= achievement %></li>
+                <% end %>
               </ul>
             </p>
           </div>
         </div>
+        <% end %>
       </section>
     </div>
 
     <div class="aside-info print:ml-8">
-      <section class="resume-section" id="skills">
+      <section class="resume-section print:mb-5" id="skills">
         <h2 class="resume-section-title print:mb-3">Skills</h2>
-
-        <h4 class="text-leading font-semibold">Web Technologies &amp; Frameworks</h4>
-        <p class="mb-2">
-          Ruby on Rails, Laravel, VueJS, AngularJS
-        </p>
-        <h4 class="text-leading font-semibold">Programming Languages</h4>
-        <p class="mb-2">
-          Ruby, PHP, Javascript, Java, Python
-        </p>
-        <h4 class="text-leading font-semibold">Databases</h4>
-        <p class="mb-2">
-          PostgreSQL, MySQL, SQL Server
-        </p>
-        <h4 class="text-leading font-semibold">Versioning</h4>
-        <p>
-           Git &amp; SVN
-        </p>
-      </section>
-
-      <section class="resume-section" id="aditionl-skills">
-        <h2 class="resume-section-title print:mb-3">Aditional Skills</h2>
-
-        <h4 class="text-leading font-semibold">Web Technologies &amp; Frameworks</h4>
-        <p class="mb-2">
-          Ruby on Rails, Laravel, VueJS, AngularJS
-        </p>
-        <h4 class="text-leading font-semibold">Programming Languages</h4>
-        <p class="mb-2">
-          Ruby, PHP, Javascript, Java, Python
-        </p>
-        <h4 class="text-leading font-semibold">Databases</h4>
-        <p class="mb-2">
-          PostgreSQL, MySQL, SQL Server
-        </p>
-        <h4 class="text-leading font-semibold">Versioning</h4>
-        <p>
-           Git &amp; SVN
-        </p>
+        <% data.skills.each do |skill| %>
+          <h4 class="text-leading font-semibold"><%= skill.section %></h4>
+          <p class="mb-2">
+            <%= skill.skills.join(', ') %>
+          </p>
+        <% end %>
       </section>
 
       <section class="resume-section" id="awards">
