@@ -1,7 +1,7 @@
 - company: OSOM Marketing Digital
   link: https://www.osom.so
   role: Software Engineer
-  description: Full stack Ruby on Rails developer. Mostly working in Box Factura, a SaaS application for bills control and accounting tools that decrease time in administration and achieve client satisfaction.
+  description: Full stack Ruby on Rails developer. Mostly working in Box Factura, a SaaS application for bills control and accounting tools that decrease time in administration; focused on achieve client satisfaction.
   date: March 2017 - Present
 
 - company: 789MX
@@ -13,5 +13,5 @@
 - company: LogicSystems
   link: https://www.logicsystems.com.mx
   role: Junior Developer
-  description: Full stack Java developer. Worked in the development of e-SIGEN, a SaaS application for Mexican public notaries control.
+  description: Full stack Java developer. Worked in the development of e-SIGEN, a SaaS application for Mexican public notaries control, and a mobile application for e-SIGEN. Maintenance to a billing/invoicing web service.
   date: June 2014 - July 2015
