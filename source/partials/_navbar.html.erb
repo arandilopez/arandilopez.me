@@ -12,7 +12,7 @@
 
       <% if current_page.page_id =~ /resume/ %>
         <div class="hidden print:block print:text-4xl text-black font-extrabold">
-          Arandi López Alonzo
+          Arandi López <span class="<%= 'hidden' if I18n.locale == :en %>">Alonzo</span>
         </div>
         <div class="hidden print:block mt-3 text-grey-darkest border-top border-down border-color-grey-darkest">
           <%= t('author.address') %>
