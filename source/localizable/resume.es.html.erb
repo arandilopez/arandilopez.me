@@ -4,7 +4,7 @@ description: Resumen / CV
 priority: 1
 ---
 <article class="resume">
-  <section class="resume-section print:mb-5" id="about-me">
+  <section class="resume-section print:mb-3" id="about-me">
     <div class="resume-item">
       <div class="resume-content">
         <p><%= t('author.description') %></p>
@@ -16,7 +16,7 @@ priority: 1
       <section class="resume-section print:mb-5" id="experience">
         <h2 class="resume-section-title print:mb-3"><%= t(:experience) %></h2>
         <% data.es.exp.each do |experience| %>
-        <div class="resume-item">
+        <div class="resume-item print:mb-3">
           <div class="resume-content">
             <h3 class="mb-0"><%= experience.role %> </h3>
             <div class="subheading">
@@ -36,7 +36,7 @@ priority: 1
       <section class="resume-section print:mb-0" id="education">
         <h2 class="resume-section-title print:mb-3"><%= t(:education) %></h2>
         <% data.es.education.each do |education| %>
-        <div class="resume-item">
+        <div class="resume-item print:mb-3">
           <div class="resume-content">
             <h3><%= education.college %></h3>
             <div class="subheading"><%= education.degree %></div>
