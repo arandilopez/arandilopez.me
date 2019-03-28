@@ -1,0 +1,14 @@
+---
+es:
+  experience: Experiencia
+  education: Educación
+  skills: Habilidades
+  awards: Reconocimientos
+  versioning: Control de versiones
+  frameworks: Tecnologías web & Frameworks
+  languages: Lenguajes de programación
+  databases: Bases de datos
+  author:
+    address: "Calle 51 #781-E, Sol Caucel. Mérida, YUC."
+    description: |
+      Desarrollador full stack interesado en mejorar sus habilidades de desarrollo en compañías con proyectos a gran escala. Tiene un historial de desarrollo de aplicaciones SaaS y sistemas ERP hechos a la medida. Contribuidor en proyectos open source. Interesado en ciencias de datos y aprendizaje máquina.

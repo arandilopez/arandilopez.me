@@ -1,25 +1,24 @@
-- section: Web Technologies & Frameworks
+- section: frameworks
   skills:
     - Ruby on Rails
     - Laravel
     - VueJS
     - AngularJS
 
-- section: Programming Languages
+- section: languages
   skills:
     - Ruby
     - PHP
     - Javascript
     - Java
-    - Python
 
-- section: Databases
+- section: databases
   skills:
     - PostgreSQL
     - MySQL
     - SQL Server
 
-- section: Versioning
+- section: versioning
   skills:
     - Git
     - SVN
