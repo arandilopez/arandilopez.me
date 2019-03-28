@@ -8,7 +8,7 @@ priority: 1
     <div class="resume-item">
       <div class="resume-content">
         <p>
-          Fullstack web developer interested in improving his development skills at companies in large-scale projects. He has a history of development of SaaS applications and tailored-made ERP systems. Regular contributor in open source projects. Interested in Data Science and Machine Learning topics.
+          <%= t('author.description') %>
         </p>
       </div>
     </div>
@@ -17,7 +17,7 @@ priority: 1
     <div class="main-info print:max-w-3/4">
       <section class="resume-section print:mb-5" id="experience">
         <h2 class="resume-section-title print:mb-3">Experience</h2>
-        <% data.exp.each do |experience| %>
+        <% data.en.exp.each do |experience| %>
         <div class="resume-item">
           <div class="resume-content">
             <h3 class="mb-0"> <%= experience.role %> </h3>
@@ -37,7 +37,7 @@ priority: 1
 
       <section class="resume-section print:mb-0" id="education">
         <h2 class="resume-section-title print:mb-3">Education</h2>
-        <% data.education.each do |education| %>
+        <% data.en.education.each do |education| %>
         <div class="resume-item">
           <div class="resume-content">
             <h3><%= education.college %></h3>

@@ -1,0 +1,78 @@
+---
+title: Arandi López - Resumen
+description: Resumen / CV
+priority: 1
+---
+<article class="resume">
+  <section class="resume-section print:mb-5" id="about-me">
+    <div class="resume-item">
+      <div class="resume-content">
+        <p><%= t('author.description') %></p>
+      </div>
+    </div>
+  </section>
+  <div class="print:flex">
+    <div class="main-info print:max-w-3/4">
+      <section class="resume-section print:mb-5" id="experience">
+        <h2 class="resume-section-title print:mb-3"><%= t(:experience) %></h2>
+        <% data.es.exp.each do |experience| %>
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3 class="mb-0"><%= experience.role %> </h3>
+            <div class="subheading">
+              <%= link_to experience.company, experience.link, target: '_blank', class: 'font-semibold uppercase text-grey-darkest no-underline' %>
+            </div>
+            <div class="resume-date mb-2">
+              <%= experience.date %>
+            </div>
+            <p>
+              <%= experience.description %>
+            </p>
+          </div>
+        </div>
+        <% end %>
+      </section>
+
+      <section class="resume-section print:mb-0" id="education">
+        <h2 class="resume-section-title print:mb-3"><%= t(:education) %></h2>
+        <% data.es.education.each do |education| %>
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3><%= education.college %></h3>
+            <div class="subheading"><%= education.degree %></div>
+            <div class="resume-date mb-2">
+              <span class="text-sm text-grey-darker"><%= education.dates %></span>
+            </div>
+            <p>
+              <ul>
+                <% education.relevant_achievements.each do |achievement| %>
+                  <li><%= achievement %></li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <% end %>
+      </section>
+    </div>
+
+    <div class="aside-info print:ml-8">
+      <section class="resume-section print:mb-5" id="skills">
+        <h2 class="resume-section-title print:mb-3"><%= t(:skills) %></h2>
+        <% data.skills.each do |skill| %>
+          <h4 class="text-leading font-semibold"><%= t skill.section %></h4>
+          <p class="mb-2">
+            <%= skill.skills.join(', ') %>
+          </p>
+        <% end %>
+      </section>
+
+      <section class="resume-section" id="awards">
+        <h2 class="resume-section-title print:mb-3"><%= t(:awards) %></h2>
+        <p>
+          <span class="font-semibold">Mérito Universitario</span> en Ingeniería de software, Universidad Autónoma de Yucatán, 2014
+        </p>
+      </section>
+    </div>
+  </div>
+</article>
