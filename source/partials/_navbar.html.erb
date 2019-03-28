@@ -10,12 +10,12 @@
         Arandi López
       <% end %>
 
-      <% if current_page.page_id == 'resume' %>
+      <% if current_page.page_id =~ /resume/ %>
         <div class="hidden print:block print:text-4xl text-black font-extrabold">
           Arandi López Alonzo
         </div>
         <div class="hidden print:block mt-3 text-grey-darkest border-top border-down border-color-grey-darkest">
-          51st street #781-E, Sol Caucel. Mérida, YUC.
+          <%= t('author.address') %>
           <br>
           <%= mail_to 'hello@arandilopez.dev', "hello@arandilopez.dev", class: "text-grey-darkest no-underline" %>
         </div>
