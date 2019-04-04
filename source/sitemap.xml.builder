@@ -5,7 +5,7 @@ xml.instruct!
 xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   pages.each do |page|
     xml.url do
-      xml.loc "https://arandilopez.me/#{page.destination_path.gsub('/index.html','')}"
+      xml.loc File.join(config[:host].to_s, page.destination_path.gsub('/index.html',''))
       xml.lastmod Date.today.to_time.iso8601
       xml.changefreq page.data.changefreq || "monthly"
       xml.priority page.data.priority || 0.6

@@ -3,6 +3,7 @@ const loaders = require('./webpack/loaders.js');
 const plugins = require('./webpack/plugins.js');
 
 module.exports = {
+  mode: 'production',
   entry: {
     site: ['./source/javascripts/site.js', './source/stylesheets/site.scss']
   },

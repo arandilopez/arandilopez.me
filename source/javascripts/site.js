@@ -1,5 +1,10 @@
 import Vue from 'vue/dist/vue'
 
+if (!window.location.host.match(/localhost/)) {
+  Vue.config.productionTip = false
+  Vue.config.devtools = false
+}
+
 new Vue({
   el: '#app',
   data: {

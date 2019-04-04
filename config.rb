@@ -32,6 +32,7 @@ end
 activate :livereload
 
 configure :build do
+  config[:host] = 'https://arandilopez.me'
   activate :minify_css, inline: true
   activate :minify_javascript, inline: true, compressor: -> { Uglifier.new(harmony: true) }
   activate :asset_hash
