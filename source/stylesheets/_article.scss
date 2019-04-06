@@ -19,7 +19,7 @@ code {
   @apply border border-solid border-grey-lighter rounded-sm font-mono text-black bg-grey-lightest;
 }
 
-.markdown a {
+.markdown a, .markdown blockquote a {
   @apply text-grey-darkest;
   &:hover {
     @apply text-black;
