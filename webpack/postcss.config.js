@@ -3,7 +3,7 @@ const inProduction = (process.env.NODE_ENV == 'production');
 
 class TailwindExtractor {
   static extract(content) {
-    return content.match(/[A-z0-9-:\/]+/g) || []
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
   }
 }
 
@@ -12,6 +12,7 @@ const DEV_PLUGINS = [
   tailwindcss('./tailwind.js'),
   require('autoprefixer')()
 ]
+
 const PROD_PLUGINS = [
   require('postcss-import')(),
   tailwindcss('./tailwind.js'),
@@ -21,6 +22,7 @@ const PROD_PLUGINS = [
       __dirname + '/../source/**/*.html',
       __dirname + '/../source/**/*.erb'
     ],
+    whitelist: ['blockquote'],
     whitelistPatterns: [/^overflow/, /^scrolling/, /^pin/],
     extractors: [{
       extractor: TailwindExtractor,
