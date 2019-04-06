@@ -6,13 +6,19 @@ tags: tensorflow nvidia cuda ubuntu pop_os
 published: true
 
 ---
-Pop!\_OS es una increíble distribución de Linux con base en Ubuntu. Pero lo que es más increíble de Pop!\_OS es su soporte para las tarjetas gráficas Nvidia. Y el soporte a Tensorflow es un gran feature para optar por Pop!\_OS como distro. En este post mostraré los pasos para conseguir Tensorflow GPU 1.13 con python3.
+Pop!\_OS es una increíble distribución de Linux con base en Ubuntu. Pero lo que es más increíble de Pop!\_OS es su soporte para las tarjetas gráficas Nvidia y el soporte a Tensorflow es un gran feature para optar por Pop!\_OS como distro. En este post mostraré los pasos para conseguir Tensorflow GPU 1.13 con python3.
 
 <!-- READMORE -->
 
-Pop!\_OS 18.04 da soporte a la tarjeta gráfica con una imagen de ISO que tiene los drivers privativos más actualizados que System76 da mantenimiento. El driver más actual es la version 418.
+Pop!\_OS 18.04 da soporte a la tarjeta gráfica con una imagen de ISO que tiene los drivers privativos más actualizados que System76 da mantenimiento. El driver más actual es la version 418,puedes revisar la versión instalada en tu OS con el comando `nvidia-smi`.
 
-Pop!\_OS tiene un [metapaquete](https://support.system76.com/articles/install-tensorflow/) para instalar nativamente Tensorflow y su soporte a CUDA instalando los drivers CUDA de Nvidia, sin embargo este metapaquete instala hasta la versión 1.9 de Tensorflow.
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.56       Driver Version: 418.56                              |
+|-------------------------------+----------------------+----------------------+
+```
+
+Pop!\_OS tiene un [metapaquete](https://support.system76.com/articles/install-tensorflow/) para instalar nativamente Tensorflow y su soporte a CUDA, sin embargo este metapaquete instala hasta la versión 1.9 de Tensorflow.
 
 ## Configurar Python 3
 
