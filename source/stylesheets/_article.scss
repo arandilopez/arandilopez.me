@@ -3,12 +3,11 @@
   @apply mb-3;
 }
 
-.markdown > p, .markdown > ol, .markdown > ul, .markdown > pre, .markdown > blockquote {
-  @apply mb-6;
-  @apply leading-normal;
+.markdown p, .markdown ol, .markdown ul, .markdown pre, .markdown blockquote {
+  @apply mb-6 leading-normal;
 }
 
-.markdown > pre {
+.markdown pre {
   @apply font-mono;
 
   code {
@@ -27,14 +26,12 @@ code {
   }
 }
 
-.markdown > blockquote {
-  @apply border-l-2 border-solid border-grey-light;
-  @apply italic pl-8;
+.markdown blockquote {
+  @apply border-solid border-l-2 border-grey-darker italic pl-8;
 }
 
-.markdown > hr {
-  @apply border-t border-grey-light border-solid;
-  @apply mb-6 mx-24;
+.markdown hr {
+  @apply border-t border-grey-light border-solid mb-6 mx-24;
 }
 
 .markdown img {
