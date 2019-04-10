@@ -34,7 +34,7 @@ To install version 1.13, the last stable of Tensorflow, we need to have the Nvid
 $ sudo apt install autogen autogen-doc cmake cmake-data guile-2.0-libs libblas3 libgc1c2 libgfortran4 libjsoncpp1 liblapack3 libnvidia-compute-418 libopts25 libopts25-dev librhash0 libuv1 python3-numpy
 ```
 
-Now install the necessary packages from NVIDIA CUDA.
+Now install the necessary CUDA packages.
 
 ```shell
 $ sudo apt install system76-cuda-10.0 system76-cudnn-10.0
