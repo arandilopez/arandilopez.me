@@ -1,7 +1,7 @@
 ---
 title: Instalar Tensorflow GPU 1.13 en Pop!_OS 18.04
 date: 2019-04-05
-tags: tensorflow nvidia cuda ubuntu pop_os
+tags: tensorflow nvidia cuda ubuntu pop_os python
 published: true
 ---
 Pop!\_OS es una increíble distribución de Linux con base en Ubuntu. Pero lo que es más increíble de Pop!\_OS es su soporte para las tarjetas gráficas Nvidia y Tensorflow, que es un gran feature para optar por Pop!\_OS como distro. En este post mostraré los pasos para conseguir Tensorflow GPU 1.13 con python3.
