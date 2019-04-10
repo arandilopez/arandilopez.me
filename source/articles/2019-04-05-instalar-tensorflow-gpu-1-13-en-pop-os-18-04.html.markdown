@@ -1,16 +1,14 @@
 ---
-
 title: Instalar Tensorflow GPU 1.13 en Pop!_OS 18.04
 date: 2019-04-05
 tags: tensorflow nvidia cuda ubuntu pop_os
 published: true
-
 ---
-Pop!\_OS es una increíble distribución de Linux con base en Ubuntu. Pero lo que es más increíble de Pop!\_OS es su soporte para las tarjetas gráficas Nvidia y el soporte a Tensorflow es un gran feature para optar por Pop!\_OS como distro. En este post mostraré los pasos para conseguir Tensorflow GPU 1.13 con python3.
+Pop!\_OS es una increíble distribución de Linux con base en Ubuntu. Pero lo que es más increíble de Pop!\_OS es su soporte para las tarjetas gráficas Nvidia y Tensorflow, que es un gran feature para optar por Pop!\_OS como distro. En este post mostraré los pasos para conseguir Tensorflow GPU 1.13 con python3.
 
 <!-- READMORE -->
 
-Pop!\_OS 18.04 da soporte a la tarjeta gráfica con una imagen de ISO que tiene los drivers privativos más actualizados que System76 da mantenimiento. El driver más actual es la version 418,puedes revisar la versión instalada en tu OS con el comando `nvidia-smi`.
+Pop!\_OS 18.04 da soporte a la tarjeta gráfica con una [imagen de ISO](https://system76.com/pop) que tiene los drivers privativos más actualizados que System76 da mantenimiento. El driver más actual es la version 418,puedes revisar la versión instalada en tu OS con el comando `nvidia-smi`.
 
 ```
 +-----------------------------------------------------------------------------+
@@ -22,7 +20,7 @@ Pop!\_OS tiene un [metapaquete](https://support.system76.com/articles/install-te
 
 ## Configurar Python 3
 
-Primero instalaremos los paquetes necesarios para iniciar nuestro desarrollo con python3, instalaremos pip y venv para manejar las dependencias de nuestros proyectos python.
+Primero instalamos los paquetes necesarios para iniciar nuestro desarrollo con python3, instalaremos pip y venv para manejar las dependencias de nuestros proyectos python.
 
 ```shell
 $ sudo apt install python3-dev python3-pip python3-venv
@@ -46,14 +44,14 @@ $ sudo apt install system76-cuda-10.0 system76-cudnn-10.0
 
 ## Instalar Tensorflow GPU
 
-Crearemos una nueva carpeta para nuestro proyecto
+Creamos una nueva carpeta para nuestro proyecto
 
 ```shell
 $ mkdir ~/test_tensorflow_gpu
 $ cd test_tensorflow_gpu
 ```
 
-Iniciaremos un nuevo virtual environment para nuestras dependecias a este proyecto.
+Iniciamos un nuevo virtual environment para nuestras dependencias a este proyecto.
 
 ```shell
 $ python3 -m venv venv
@@ -65,11 +63,14 @@ $ source venv/bin/activate
 Instala Tensorflow. El paquete correcto para instalar Tensorflow con soporte a CUDA es `tensorflow-gpu`.
 
 ```shell
+(venv)
 $ pip install --upgrade tensorflow-gpu
 ```
 
 Prueba la instalación de Tensorflow.
 
 ```shell
-$ python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
+(venv)
+$ python -c "import tensorflow as tf; print(tf.test.is_built_with_cuda());"
+True # <-- salida esperada
 ```
