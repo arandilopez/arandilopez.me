@@ -1,5 +1,5 @@
 ---
-title: Instalar Tensorflow GPU 1.13 en Pop!_OS 18.04
+title: Install Tensorflow GPU 1.13 on Pop!_OS 18.04
 date: 2019-04-09
 tags: tensorflow nvidia cuda ubuntu pop_os python
 published: true
