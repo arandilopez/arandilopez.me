@@ -121,7 +121,7 @@ GEM
     parallel (1.19.1)
     progress (3.5.2)
     public_suffix (4.0.3)
-    rack (2.2.1)
+    rack (2.0.9)
     rack-livereload (0.3.17)
       rack
     rb-fsevent (0.10.3)
@@ -150,7 +150,7 @@ DEPENDENCIES
   middleman-imageoptim!
   middleman-livereload
   nokogiri
-  rack (>= 2.0.6)
+  rack (~> 2.0.6)
   tzinfo-data
   wdm (~> 0.1)
 
