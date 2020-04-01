@@ -28,7 +28,6 @@ activate :blog do |blog|
   blog.layout = 'article'
 end
 
-
 activate :livereload
 
 configure :build do

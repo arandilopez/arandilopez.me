@@ -1,3 +1,5 @@
+# frozen_string_literal
+
 source 'https://rubygems.org'
 
 ruby '2.4.3'
