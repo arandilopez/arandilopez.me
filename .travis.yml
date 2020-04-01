@@ -1,8 +1,15 @@
 rvm: 2.4.3
-nvm: 8.13.0
+node_js: 8.13.0
+
+before_install:
+  - ruby -v
+  - node -v
 
 install:
   - bundle install --jobs=$(nproc)
   - yarn --frozen-lockfile
 
 script: bundle exec middleman build --verbose
+
+cache:
+  yarn: true
