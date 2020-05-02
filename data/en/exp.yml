@@ -1,32 +1,33 @@
 - company: OSOM Marketing Digital
   link: https://www.osom.so
   role: Software Engineer
-  description: Full stack Ruby on Rails developer. Mostly working in Box Factura, a SaaS application for bills control and accounting tools that decrease time in administration; focused on achieve client satisfaction.
+  description: Full stack developer. Mostly working in Box Factura, a SaaS application for bills control and accounting tools that decrease time in administration; focused on achieve client satisfaction.
   date: March 2017 - Present
   skills:
     - Ruby
     - Javascript
     - Ruby on Rails
-    - VueJs
+    - Vue.js
     - PostgreSQL
+    - Heroku
 
 - company: 789MX
   link: https://789.mx
   role: Web Developer
-  description: Full stack Laravel/PHP developer. Worked on several ERP systems projects tailored-made to facilitate warehouse processes.
+  description: Full stack developer. Worked on several ERP systems projects tailored-made to facilitate warehouse processes.
   date: July 2015 - March 2017
   skills:
     - PHP
+    - Laravel
     - Javascript
-    - Laravel 5
+    - Vue.js
     - AngularJS
-    - VueJs
     - MySQL
 
 - company: LogicSystems
   link: https://www.logicsystems.com.mx
   role: Junior Developer
-  description: Full stack Java developer. Worked in the development of e-SIGEN, a SaaS application for Mexican public notaries control, and a mobile application for e-SIGEN. Maintenance to a billing/invoicing web service.
+  description: Web and Mobile developer. Worked in the development of e-SIGEN, a SaaS application for Mexican public notaries control, and a mobile application for e-SIGEN. Maintenance to a billing/invoicing web service.
   date: June 2014 - July 2015
   skills:
     - Java
@@ -37,17 +38,20 @@
     - Titanium
     - MS SQL Server
     - PostgreSQL
+    - Tomcat
+    - Glassfish
 
 - company: Universidad Autónoma de Yucatán
   link: https://www.matematicas.uady.mx
   role: Contract Professor
   description: Professor of undergraduate and diploma graduate courses in web development.
-  date: 2016 - 2019
+  date: 2016 - Present
   skills:
     - PHP
-    - Javascript
     - Laravel
+    - Javascript
+    - Vue.js
     - AngularJS
-    - C
     - Java
+    - C/C++
     - Data Structures
