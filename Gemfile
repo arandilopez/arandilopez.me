@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.4.3'
+ruby '2.6.5'
 
 gem 'rack', '~> 2.0.6'
 gem 'middleman', '~> 4.2'
