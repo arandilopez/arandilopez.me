@@ -1,5 +1,5 @@
-rvm: 2.4.3
-node_js: 8.13.0
+rvm: 2.6.2
+node_js: 10.15.3
 
 before_install:
   - ruby -v
