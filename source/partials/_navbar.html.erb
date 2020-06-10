@@ -2,26 +2,26 @@
   <div class="flex md:block lg:flex items-center max-w-full">
     <div class="mb-0 md:mb-4 lg:mb-0 flex flex-no-shrink pr-4 md:pr-6 lg:pr-12 print:hidden">
       <a href="/" class="flex items-center no-underline">
-        <%= image_tag "profile.jpg", class: "h-10 w-10 md:h-12 md:w-12 lg:h-20 lg:w-20 rounded-full" %>
+        <%= image_tag "Profile.jpg", class: "h-10 w-10 md:h-12 md:w-12 lg:h-20 lg:w-20 rounded-full" %>
       </a>
     </div>
     <div class="print:flex-1">
-      <% link_to("/", class: "print:hidden text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight") do %>
-        Arandi López
+      <% link_to("/", class: "print:hidden text-black no-underline text-xl lg:text-3xl leading-none lg:leading-tight") do %>
+          Arandi López
       <% end %>
 
       <% if current_page.page_id =~ /resume/ %>
-        <div class="hidden print:block print:text-4xl text-black font-extrabold">
+        <div class="hidden print:block print:text-4xl text-black font-bold">
           Arandi López <span class="<%= 'hidden' if I18n.locale == :en %>">Alonzo</span>
         </div>
-        <div class="hidden print:block mt-1 text-grey-darkest border-top border-down border-color-grey-darkest">
-          <%= mail_to 'arandi@arandilopez.dev', "arandi@arandilopez.dev", class: "text-grey-darkest no-underline" %>
+        <div class="hidden print:block mt-1 text-gray-900 border-top border-down border-color-gray-900">
+          <%= mail_to 'arandi@arandilopez.dev', "arandi@arandilopez.dev", class: "text-gray-900 no-underline" %>
         </div>
       <% end %>
 
       <div class="hidden md:flex mt-3 lg:mt-4 uppercase text-xs">
-        <%= nav_link "Resume", "/resume", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
-        <%= nav_link "Articles", "/articles", class: "text-grey-dark font-semibold no-underline hover:text-black mr-6" %>
+        <%= nav_link "Resume", "/resume", class: "text-gray-800 font-semibold no-underline hover:text-black mr-6" %>
+        <%= nav_link "Articles", "/articles", class: "text-gray-800 font-semibold no-underline hover:text-black mr-6" %>
       </div>
     </div>
   </div>

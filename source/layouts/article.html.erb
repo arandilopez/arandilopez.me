@@ -12,13 +12,14 @@
   <link rel="alternate" type="application/atom+xml" title="Articles" href="/rss.xml" />
   <title><%= current_article.data.title || "Arandi Lopez" %></title>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/atom-one-dark.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans&family=Open+Sans&display=swap" rel="stylesheet" />
   <%= stylesheet_link_tag "site" %>
 </head>
-<body id="page-top" class="font-sans text-black leading-tight">
+<body id="page-top" class="font-body text-black leading-tight">
   <div id="app" class="py-8 lg:py-16 px-6 md:px-16 lg:px-24">
     <%= partial 'partials/navbar' %>
     <div class="mt-12 print:mt-6">
-      <div class="max-w-lg mx-auto">
+      <div class="max-w-3xl mx-auto">
         <article class="article">
           <header class="mb-8">
             <h1 class="text-4xl"><%= current_article.title %></h1>

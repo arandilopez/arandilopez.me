@@ -16,22 +16,22 @@
 }
 
 code {
-  @apply border border-solid border-grey-lighter rounded-sm font-mono text-black bg-grey-lightest;
+  @apply border border-solid border-gray-200 rounded-sm font-mono text-black bg-gray-100;
 }
 
 .markdown a, .markdown blockquote a {
-  @apply text-grey-darkest;
+  @apply text-gray-800;
   &:hover {
     @apply text-black;
   }
 }
 
 .markdown blockquote {
-  @apply border-solid border-l-2 border-grey-darker italic pl-8;
+  @apply border-solid border-l-2 border-gray-700 italic pl-8;
 }
 
 .markdown hr {
-  @apply border-t border-grey-light border-solid mb-6 mx-24;
+  @apply border-t border-gray-300 border-solid mb-6 mx-24;
 }
 
 .markdown img {
@@ -44,7 +44,7 @@ code {
 }
 
 .summary a {
-  @apply text-grey-darkest;
+  @apply text-gray-800;
 
   &:hover {
     @apply text-black;
