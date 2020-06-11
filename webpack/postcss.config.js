@@ -23,7 +23,7 @@ const PROD_PLUGINS = [
       __dirname + '/../source/**/*.erb'
     ],
     whitelist: ['blockquote'],
-    whitelistPatterns: [/^overflow/, /^scrolling/, /^pin/],
+    whitelistPatterns: [/^overflow/, /^scrolling/, /^inset/],
     extractors: [{
       extractor: TailwindExtractor,
       extensions: ['html', 'js', 'erb', 'html.erb']

@@ -7,7 +7,7 @@
     </div>
     <div class="print:flex-1">
       <% link_to("/", class: "print:hidden text-black no-underline text-xl lg:text-3xl leading-none lg:leading-tight") do %>
-          Arandi López
+          <span class="font-body">Arandi López</span>
       <% end %>
 
       <% if current_page.page_id =~ /resume/ %>
@@ -27,13 +27,13 @@
   </div>
 
   <div class="block md:hidden print:hidden">
-    <button class="block" @click="toggleMenu">
-      <svg style="display: block;" :class="menuOpen ? 'hidden' : 'block'" class="block text-black h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      <svg style="display: none;" :class="menuOpen ? 'block' : 'hidden'" class="text-black h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+    <button class="block" v-on:click.prevent="toggleMenu">
+      <svg :class="menuOpen ? 'hidden' : 'block'" class="block text-black h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      <svg :class="menuOpen ? 'block' : 'hidden'" class="text-black h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
     </button>
   </div>
 </div>
-<div style="display: none;" :class="menuOpen ? 'block' : 'hidden'" class="md:hidden z-10 bg-white fixed pin pt-24">
+<div :class="menuOpen ? 'block' : 'hidden'" class="md:hidden z-10 bg-white fixed inset-0 pt-24">
   <div class="overflow-y-auto pt-6 pb-8 px-12 max-h-full overflow-y-auto">
     <%= link_to "Resume", "/resume", class: "block text-black font-semibold no-underline mb-8" %>
     <%= link_to "Articles", "/articles", class: "block text-black font-semibold no-underline mb-8" %>
