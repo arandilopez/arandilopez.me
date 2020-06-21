@@ -1,4 +1,4 @@
-var CACHE_NAME = 'offiline-v1';
+var CACHE_NAME = 'offline-v1';
 self.addEventListener("install", function(event) {
   event.waitUntil(preLoad());
 });

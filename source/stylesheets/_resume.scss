@@ -20,6 +20,10 @@
 }
 
 .resume-date {
-  @apply text-sm text-gray-600;
+  @apply text-sm text-gray-700;
+}
+
+.resume-skill-list {
+  @apply text-sm italic text-gray-700;
 }
 /*! purgecss end ignore */
