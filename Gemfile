@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.2'
 
-gem 'rack', '~> 2.0.6'
+gem 'rack', '~> 2.1.4'
 gem 'middleman', '~> 4.2'
 gem "middleman-blog", "~> 4.0"
 gem 'middleman-autoprefixer', '~> 2.7'
