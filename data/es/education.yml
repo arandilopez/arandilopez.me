@@ -1,8 +1,0 @@
-- college: "Universidad Autónoma de Yucatán"
-  degree: Ingeniería de software
-  dates: "Enero 2011 - Agosto 2015"
-  relevant_achievements:
-    - "Mérito Universitario en Ingeniería de software, 2014"
-    - "Co-organizador del hackton \"App Challenge\" en 2014, 2015, and 2016."
-    - "Impartió varios tallers sobre Git, AngularJS, Desarrollo web, Linux."
-    # - "Implementó la aplicación móvil para la plataforma Moodle de la Facultad"

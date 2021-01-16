@@ -1,0 +1,14 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% capture page_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
+<title>{% if page_title != "" %}{{ page_title | escape }} | {{ metadata.title | escape }}{% else %}{{ metadata.title | escape }}: {{ metadata.tagline | escape }}{% endif %}</title>
+
+<meta name="author" content="{{ metadata.author }}" />
+<meta name="description" content="{{ metadata.description }}" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans&family=Oswald&family=Open+Sans&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{% webpack_path css %}" />
+<script src="{% webpack_path js %}" defer></script>

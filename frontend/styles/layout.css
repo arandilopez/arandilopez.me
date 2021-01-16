@@ -1,0 +1,61 @@
+.layout {
+  @apply grid gap-0 container mx-auto;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    ". footer .";
+}
+
+@screen md {
+  .layout {
+    @apply px-3 gap-3;
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  @apply text-sm text-center text-gray-700 py-5;
+  grid-area: footer;
+}
+
+.navbar {
+  @apply grid gap-0 py-8;
+  grid-template-columns: 1fr 9fr 2fr;
+  grid-template-areas: ". links burguer";
+}
+
+@screen sm {
+  .navbar {
+    @apply gap-3;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-areas: "avatar links .";
+  }
+}
+
+.avatar {
+  display: none;
+}
+
+@screen sm {
+  .avatar {
+    @apply justify-self-center;
+    grid-area: avatar;
+    display: block;
+  }
+}
+
+.links {
+  grid-area: links;
+}
+
+.burguer {
+  grid-area: burguer;
+}

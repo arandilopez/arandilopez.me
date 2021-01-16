@@ -1,5 +1,6 @@
-rvm: 2.6.2
-node_js: 10.15.3
+language: ruby
+rvm: 2.7.2
+node_js: 14.15
 
 before_install:
   - ruby -v
@@ -9,7 +10,7 @@ install:
   - bundle install --jobs=$(nproc)
   - yarn --frozen-lockfile
 
-script: bundle exec middleman build --verbose
+script: yarn deploy
 
 cache:
   yarn: true

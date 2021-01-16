@@ -1,0 +1,72 @@
+/**
+ * Base styles for html tags
+ */
+
+html,
+body {
+  @apply bg-white text-gray-800;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-title font-bold;
+}
+
+h1 {
+  @apply text-4xl pb-3;
+}
+
+h2 {
+  @apply text-3xl pb-2;
+}
+
+h3 {
+  @apply text-2xl pb-1;
+}
+
+a {
+  @apply text-accent hover:text-accent-dark underline hover:no-underline;
+}
+
+p {
+  @apply pb-2;
+}
+
+hr {
+  @apply py-2;
+}
+
+ol {
+  @apply list-decimal list-inside;
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+blockquote {
+  @apply my-3 pl-2 italic border-solid border-l-2 border-gray-700;
+}
+
+em {
+  @aaply italic text-gray-700;
+}
+
+/**
+ * Styles for code highlighting
+ */
+
+.highlight pre {
+  @apply font-mono p-5 overflow-x-auto;
+}
+
+.highlighter-rouge {
+  @apply pb-2;
+}
+
+p code,
+ol code,
+ul code {
+  @apply font-mono bg-gray-200 text-gray-700;
+}

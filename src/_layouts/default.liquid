@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% render "head", metadata: site.metadata, title: page.title %}
+        {% feed_meta %}
+    </head>
+    <body>
+        <div class="layout">
+            <header class="header">
+                {% render "navbar", metadata: site.metadata, page: page %}
+            </header>
+            <main class="main">
+                {{ content }}
+            </main>
+            <footer class="footer">
+                {% render "footer", metadata: site.metadata %}
+            </footer>
+        </div>
+    </body>
+</html>

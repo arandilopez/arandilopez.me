@@ -1,8 +1,0 @@
-- college: "Universidad Autónoma de Yucatán"
-  degree: Software Engineering
-  dates: "January 2011 - August 2015"
-  relevant_achievements:
-    - "University Merit Award in Software Engineering, 2014"
-    - "Co-organized \"App Challenge\" hackathons in 2014, 2015, and 2016."
-    - "Gave several workshops in technologies like Git, AngularJS, Web Development, Linux."
-    # - "Implemented falculty's moodle mobile application."

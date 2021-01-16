@@ -1,0 +1,9 @@
+@import "tailwindcss/base";
+
+@import "syntax-one-dark";
+@import "base";
+
+@import "tailwindcss/components";
+@import "layout";
+
+@import "tailwindcss/utilities";
