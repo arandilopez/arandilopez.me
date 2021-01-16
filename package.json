@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "bundle exec bridgetown build",
-    "serve": "bundle exec bridgetown serve",
+    "serve": "bundle exec bridgetown serve -U",
     "clean": "bundle exec bridgetown clean",
     "webpack-build": "NODE_ENV=production webpack --mode production",
     "webpack-dev": "webpack --mode development -w",
