@@ -70,3 +70,7 @@ ol code,
 ul code {
   @apply font-mono bg-gray-200 text-gray-700;
 }
+
+ul.pagination {
+  @apply list-none;
+}

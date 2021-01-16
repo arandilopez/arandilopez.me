@@ -7,20 +7,20 @@ pagination:
   per_page: 5
 ---
 
-<ul class="list-none">
+<section>
   {% for post in paginator.documents %}
-    <li>
+    <article>
       <a href="{{ post.url }}">
         <h3 class="text-gray-700 hover:text-gray-800">{{ post.title }}</h3>
       </a>
       <p>{{ post.excerpt }}</p>
-    </li>
+    </article>
   {% endfor %}
-</ul>
+</section>
 
 {% if paginator.total_pages > 1 %}
 
-  <ul class="pagination list-none">
+  <ul class="pagination">
     {% if paginator.previous_page %}
     <li>
       <a href="{{ paginator.previous_page_path }}">Previous Page</a>
