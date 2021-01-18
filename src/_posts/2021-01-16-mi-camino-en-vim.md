@@ -2,6 +2,7 @@
 layout: post
 title: "Mi camino en Vim"
 published: true
+tags: vim
 ---
 
 En los últimos 2 años he usado [Vim](https://vim.org) como mi editor por default en todas las computadoras que tengo (aunque desde el 2020 Emacs se ha
