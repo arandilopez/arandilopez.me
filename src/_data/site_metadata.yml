@@ -7,6 +7,11 @@
 title: Arandi López
 tagline: Personal Web Page
 email: arandi@arandilopez.dev
-author: Arandi López
+author:
+  name: Arandi López
+  twitter: arandilopez
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome!, this is my personal site where I publish articles and info about me.
+twitter:
+  username: arandilopez
+  card: summary

@@ -3,7 +3,8 @@
 {% capture page_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
 <title>{% if page_title != "" %}{{ page_title | escape }} | {{ metadata.title | escape }}{% else %}{{ metadata.title | escape }}: {{ metadata.tagline | escape }}{% endif %}</title>
 
-<meta name="author" content="{{ metadata.author }}" />
+{% seo title=false %}
+<meta name="author" content="{{ metadata.author.name }}" />
 <meta name="description" content="{{ metadata.description }}" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
