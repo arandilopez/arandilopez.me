@@ -63,7 +63,7 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 ```
 
-> Having activated the virtual environment already allows us to run both `python3` and` pip3` as `python` and `pip` respectively.
+> Having activated the virtual environment already allows us to run both `python3` and `pip3` as `python` and `pip` respectively.
 
 Install Tensorflow. The correct package to install Tensorflow with CUDA support is `tensorflow-gpu`.
 
