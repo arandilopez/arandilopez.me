@@ -43,8 +43,6 @@ Si, Vim. ¿Por que no?. Mucha gente lo usa y lo ha usado por casi 40 años. Much
 Y si eso sucede es por algo. Y si aún vive en estos tiempos de **hype/trending adopment** es porque algo bien hace. Y es la verdad.
 Es un editor increible.
 
----
-
 Si ya leiste hasta aquí, lamento decepcionarte que esto no es un tutorial de Vim. Hay muchos por [ahi](https://www.google.com/search?q=vim+tutorial)
 que podrías revisar. Pero creo que lo importante de aprender ha usar una herramienta, como lo es Vim, es que lo hagas por pasos.
 Que lo hagas a tu forma y ya tu ritmo. Podrías obligarte a usar Vim desintalando cualquier otro editor como lo hice yo.
@@ -59,8 +57,6 @@ Me tomó meses de aprender, de crear memoria muscular con los comandos, de inter
 [configuración para mi](https://github.com/arandilopez/vimfiles).
 
 Creo que realmente ha mejorado la forma en la que escribo código. Ha cambiado la forma en la que veo y percibo un entorno de desarrollo.
-
----
 
 Éste no será el último post sobre Vim. Espero hablar un poco de las configuraciones que tengo. Sin embargo tengo otro contenido que quiero
 escribir, pero ahora sobre Emacs.

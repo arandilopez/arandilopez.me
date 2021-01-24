@@ -34,7 +34,7 @@ p {
 }
 
 hr {
-  @apply py-2;
+  @apply py-3 my-2 border-t border-gray-500;
 }
 
 ol {

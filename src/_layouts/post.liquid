@@ -10,4 +10,24 @@ layout: default
     </ul>
 
     {{ content }}
+
+    {% if page.published %}
+        <section>
+            <hr class="border-t-2 border-gray-800" />
+            {% find available_posts where site.posts, published == true, title != page.title %}
+            {% assign next_post = available_posts | sample %} 
+            {% if next_post %}
+                <article>
+                    <h4 class="uppercase font-title text-sm">Next article:</h4>
+                    <a href="{{ next_post.url  }}">
+                        <h3 class="text-gray-700">{{ next_post.title  }}</h3>
+                    </a>
+                    <div class="summary">
+                        {{ next_post.excerpt  }}
+                    </div>
+                </article>
+            {% endif %}
+        </section>
+    {% endif %}
 </article>
+
