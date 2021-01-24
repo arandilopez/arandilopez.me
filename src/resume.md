@@ -7,10 +7,9 @@ Web developer interested in improving his development skills at companies in lar
 
 ## Experience
 
-<!-- **[Michelada.io](https://michelada.io/)** — _Full Stack Web Developer_\ -->
-<!-- January 2020 - Present\ -->
-<!-- Description Here.\ -->
-<!-- _Skills: Ruby on Rails_ -->
+**[Michelada.io](https://michelada.io/)** — _Full Stack Web Developer_\
+January 2020 - Present\
+_Skills: Ruby on Rails_
 
 **[OSOM Marketing Digital](https://osom.so)** — _Full stack Web Developer_\
 March 2017 - January 2020\
