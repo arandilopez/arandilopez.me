@@ -23,6 +23,7 @@
 
 .footer {
   @apply text-sm text-center text-gray-700 py-5;
+  @apply dark:text-gray-200;
   grid-area: footer;
 }
 

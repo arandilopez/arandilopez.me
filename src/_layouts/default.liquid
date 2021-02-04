@@ -4,7 +4,7 @@
         {% render "head", metadata: site.metadata, title: page.title %}
         {% feed_meta %}
     </head>
-    <body class="{{ page.layout }}">
+    <body class="{{ page.layout }} h-full min-h-screen">
         <div class="layout">
             <header class="header">
                 {% render "navbar", metadata: site.metadata, page: page %}

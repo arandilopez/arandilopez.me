@@ -11,7 +11,7 @@ pagination:
   {% for post in paginator.documents %}
     <article>
       <a href="{{ post.url }}">
-        <h3 class="text-gray-700 hover:text-gray-800">{{ post.title }}</h3>
+        <h3 class="text-gray-700 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-400">{{ post.title }}</h3>
       </a>
       <p>{{ post.excerpt }}</p>
     </article>

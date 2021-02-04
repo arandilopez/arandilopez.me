@@ -5,6 +5,7 @@
 html,
 body {
   @apply bg-white text-gray-800;
+  @apply dark:bg-gray-900 dark:text-gray-200;
 }
 
 h1,
@@ -50,11 +51,12 @@ ul {
 }
 
 blockquote {
-  @apply my-3 pl-2 italic border-solid border-l-2 border-gray-700;
+  @apply my-3 pl-2 italic border-solid border-l-2 border-gray-700 dark:border-gray-300;
 }
 
 em {
-  @aaply italic text-gray-700;
+  @apply italic text-gray-700;
+  @apply dark:text-gray-200;
 }
 
 /**
@@ -73,6 +75,7 @@ p code,
 ol code,
 ul code {
   @apply font-mono bg-gray-200 text-gray-700 px-1;
+  @apply dark:bg-gray-800 dark:text-gray-200;
 }
 
 ul.pagination {
