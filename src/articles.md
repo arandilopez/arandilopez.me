@@ -2,13 +2,13 @@
 layout: page
 title: Articles
 permalink: /articles/
-pagination:
-  enabled: true
+paginate:
+  collection: posts
   per_page: 5
 ---
 
 <section>
-  {% for post in paginator.documents %}
+  {% for post in paginator.resources %}
     <article>
       <a href="{{ post.url }}">
         <h3 class="text-gray-700 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-400">{{ post.title }}</h3>

@@ -3,6 +3,7 @@
     <head>
         {% render "head", metadata: site.metadata, title: page.title %}
         {% feed_meta %}
+        {% live_reload_dev_js %}
     </head>
     <body class="{{ page.layout }} h-full min-h-screen">
         <div class="layout">
