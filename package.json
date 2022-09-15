@@ -8,7 +8,7 @@
     "clean": "bundle exec bridgetown clean",
     "esbuild": "node esbuild.config.js --minify",
     "esbuild-dev": "node esbuild.config.js --watch",
-    "deploy": "yarn clean && yarn esbuild-build && yarn build"
+    "deploy": "yarn clean && yarn esbuild && yarn build"
   },
   "dependencies": {
     "alpinejs": "^2.8.0",
