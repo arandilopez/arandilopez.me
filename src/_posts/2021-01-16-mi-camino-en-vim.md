@@ -5,8 +5,7 @@ published: true
 tags: vim
 ---
 
-En los últimos 2 años he usado [Vim](https://vim.org) como mi editor por default en todas las computadoras que tengo (aunque desde el 2020 Emacs se ha
-vuelto mi elección preferida, pero haré un post para hablar luego de eso). Y todo empezó porque no quiero usar VS Code.
+En los últimos 2 años he usado [Vim](https://vim.org) como mi editor por default en todas las computadoras que tengo (aunque desde el 2020 Emacs se ha vuelto mi elección preferida, pero haré un post para hablar luego de eso). Y todo empezó porque no quiero usar VS Code.
 
 <!-- more -->
 
