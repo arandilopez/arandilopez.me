@@ -5,7 +5,7 @@ layout: default
     <h1>{{ page.title }}</h1>
     <ul class="hidden sm:flex items-center space-x-2 text-xs font-mono mb-3 list-none">
         {% for tag in page.tags %}
-            <li class="flex-grow-0 rounded px-2 py-1 bg-gray-200 dark:bg-gray-800">{{ tag }}</li>
+            <li class="grow-0 rounded px-2 py-1 bg-gray-200 dark:bg-gray-800">{{ tag }}</li>
         {% endfor %}
     </ul>
 
@@ -15,7 +15,7 @@ layout: default
         <section>
             <hr class="border-t-2 border-gray-800 dark:border-gray-200" />
             {% find available_posts where site.posts, published == true, title != page.title %}
-            {% assign next_post = available_posts | sample %} 
+            {% assign next_post = available_posts | sample %}
             {% if next_post %}
                 <article>
                     <h4 class="uppercase font-title text-sm">Next article:</h4>
