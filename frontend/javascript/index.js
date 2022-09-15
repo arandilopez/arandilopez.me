@@ -1,7 +1,11 @@
-import 'index.css'
-import 'alpinejs'
-import { headingAnchors } from './heading_anchors'
+import Alpine from "alpinejs";
+import { headingAnchors } from "./heading_anchors";
+import "../styles/index.css";
 
-document.addEventListener('DOMContentLoaded', () => {
-    headingAnchors()
-})
+window.Alpine = Alpine;
+
+Alpine.start();
+
+document.addEventListener("DOMContentLoaded", () => {
+  headingAnchors();
+});

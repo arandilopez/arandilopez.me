@@ -14,7 +14,7 @@
                 {% render "nav_links" %}
             </div>
         </div>
-        <button class="burguer sm:hidden p-2" @click.prevent="open = !open">
+        <button class="burguer sm:hidden p-2" @click="open = !open">
             <svg class="w-6 h-6"
                  fill="none"
                  stroke="currentColor"
@@ -26,9 +26,9 @@
         </button>
     </nav>
     <div x-show="open"
-         x-transition:enter="transition duration-200 transform ease-out"
+         x-transition:enter="transition duration-200 ease-out"
          x-transition:enter-start="scale-75"
-         x-transition:leave="transition duration-100 transform ease-in"
+         x-transition:leave="transition duration-100 ease-in"
          x-transition:leave-end="opacity-0 scale-90"
          class="sm:hidden z-10 bg-white dark:bg-gray-900 fixed inset-0 pt-24">
         <div class="flex flex-col space-y-5 text-center uppercase">
