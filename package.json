@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "build": "bundle exec bridgetown build",
-    "serve": "bundle exec bridgetown serve -U",
+    "dev": "bundle exec bridgetown dev",
     "clean": "bundle exec bridgetown clean",
     "esbuild": "node esbuild.config.js --minify",
     "esbuild-dev": "node esbuild.config.js --watch",
     "deploy": "yarn clean && yarn esbuild && yarn build"
   },
   "dependencies": {
-    "alpinejs": "^2.8.0",
+    "alpinejs": "^3.10.3",
     "autoprefixer": "^10.4.11",
     "tailwindcss": "^3.1.8"
   },
