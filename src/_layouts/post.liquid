@@ -3,6 +3,13 @@ layout: default
 ---
 <article class="article max-w-xs sm:max-w-3xl mx-auto">
     <h1>{{ page.title }}</h1>
+
+    {% if page.published %}
+    <h5 class="text-sm font-400">
+      Published at <time>{{ page.date | date: "%a, %b %d, %y" }}<time>
+    </h5>
+    {% endif %}
+
     <ul class="hidden sm:flex items-center space-x-2 text-xs font-mono mb-3 list-none">
         {% for tag in page.tags %}
             <li class="grow-0 rounded px-2 py-1 bg-gray-200 dark:bg-gray-800">{{ tag }}</li>
@@ -13,19 +20,19 @@ layout: default
 
     {% if page.published %}
         <section>
-            <hr class="border-t-2 border-gray-800 dark:border-gray-200" />
-            {% find available_posts where site.posts, published == true, title != page.title %}
-            {% assign next_post = available_posts | sample %}
+            {% assign published_posts = collections.posts.resources | where_exp: "published == true", "title != page.title" %}
+            {% assign next_post = published_posts | sample %}
             {% if next_post %}
-                <article>
-                    <h4 class="uppercase font-title text-sm">Next article:</h4>
-                    <a href="{{ next_post.url  }}">
-                        <h3 class="text-gray-700 dark:text-gray-200">{{ next_post.title  }}</h3>
-                    </a>
-                    <div class="summary">
-                        {{ next_post.excerpt  }}
-                    </div>
-                </article>
+              <hr class="border-t-2 border-gray-800 dark:border-gray-200" />
+              <article>
+                <h4 class="uppercase font-title text-sm">Next article:</h4>
+                <a href="{{ next_post.relative_url  }}">
+                  <h3 class="text-gray-700 dark:text-gray-200">{{ next_post.title  }}</h3>
+                </a>
+                <div class="summary">
+                  {{ next_post.summary  }}
+                </div>
+              </article>
             {% endif %}
         </section>
     {% endif %}
