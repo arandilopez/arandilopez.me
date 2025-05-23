@@ -7,12 +7,24 @@ layout: default
       {{ page.title }}
     </h1>
 
-    {% if page.date %}
-    <p class="text-neutral text-sm mb-6">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
+    {% if page.date or page.tags.size > 0 %}
+    <div class="flex flex-wrap items-center text-neutral text-sm mb-6">
+      {% if page.date %}
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="mr-4">
         Published on {{ page.date | date: "%B %d, %Y" }}
       </time>
-    </p>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+      <div class="flex items-center">
+        <span class="font-semibold mr-2">Tags:</span>
+        <div class="flex flex-wrap">
+          {% for tag in page.tags %}
+          <span class="mr-1 mb-1 px-2 py-1 bg-base-200 text-base-content rounded text-xs">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
     {% endif %}
 
     {% if page.description %}

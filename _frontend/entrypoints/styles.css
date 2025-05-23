@@ -1,7 +1,7 @@
 @import "tailwindcss" source("../../.");
 
-
 @plugin "@tailwindcss/typography";
+
 @plugin "daisyui" {
   themes: false;
 }
@@ -41,7 +41,7 @@
   --noise: 0;
 }
 
-/* @plugin "daisyui/theme" {
+@plugin "daisyui/theme" {
   name: "coolfreak";
   default: false;
   prefersdark: true;
@@ -74,6 +74,10 @@
   --border: 1px;
   --depth: 1;
   --noise: 0;
-} */
+}
 
 @import "./css/code.css";
+
+:root {
+  --nav-h: 4rem; /* Adjust if your navbar height is different */
+}
