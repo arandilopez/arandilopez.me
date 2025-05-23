@@ -8,7 +8,7 @@ layout: default
     </h1>
 
     {% if page.date or page.tags.size > 0 %}
-    <div class="flex flex-wrap items-center text-neutral text-sm mb-6">
+    <div class="flex flex-wrap items-center text-sm mb-6">
       {% if page.date %}
       <time datetime="{{ page.date | date_to_xmlschema }}" class="mr-4">
         Published on {{ page.date | date: "%B %d, %Y" }}
