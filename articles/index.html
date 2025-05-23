@@ -5,53 +5,56 @@ pagination:
   enabled: true
 ---
 
-<div class="container mx-auto px-4 py-8">
-  <div class="max-w-3xl mx-auto">
-    {% for post in paginator.posts %}
-    <article class="py-8 border-b border-base-300 dark:border-base-content/20 last:border-b-0 group">
-      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-        <a href="{{ post.url | relative_url }}" class="link link-hover link-primary group-hover:underline">{{ post.title }}</a>
-      </h2>
-      {% if post.date %}
-      <p class="text-sm text-base-content/70 mb-3">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-      </p>
-      {% endif %}
-      {% if post.excerpt %}
-      <p class="text-sm sm:text-base text-base-content/90 mb-4">
-        {{ post.excerpt | strip_html | truncatewords: 50 }}
-      </p>
-      {% endif %}
-      <div class="mt-4">
-        <a href="{{ post.url | relative_url }}" class="btn btn-ghost btn-sm">
-          Read More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
-    </article>
-    {% endfor %}
-    <!-- Pagination links -->
-    {% if paginator.total_pages > 1 %}
-    <div class="join mt-8 flex justify-center">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="join-item btn btn-outline">« Prev</a>
-      {% else %}
-        <button class="join-item btn btn-outline" disabled>« Prev</button>
-      {% endif %}
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <button class="join-item btn btn-primary">{{ page }}</button>
-        {% elsif page == 1 %}
-          <a href="{{ '/articles/' | relative_url }}" class="join-item btn btn-outline">{{ page }}</a>
-        {% else %}
-          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="join-item btn btn-outline">{{ page }}</a>
-        {% endif %}
-      {% endfor %}
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="join-item btn btn-outline">Next »</a>
-      {% else %}
-        <button class="join-item btn btn-outline" disabled>Next »</button>
-      {% endif %}
+<div class="max-w-3xl mx-auto">
+  {% for post in paginator.posts %}
+  <article class="py-8 border-b border-base-300 dark:border-base-content/20 last:border-b-0 group">
+    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+      <a href="{{ post.url | relative_url }}" class="link link-hover link-primary group-hover:underline">{{ post.title
+        }}</a>
+    </h2>
+    {% if post.date %}
+    <p class="text-sm text-base-content/70 mb-3">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    </p>
+    {% endif %}
+    {% if post.excerpt %}
+    <p class="text-sm sm:text-base text-base-content/90 mb-4">
+      {{ post.excerpt | strip_html | truncatewords: 50 }}
+    </p>
+    {% endif %}
+    <div class="mt-4">
+      <a href="{{ post.url | relative_url }}" class="btn btn-ghost btn-sm">
+        Read More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 inline-block" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
     </div>
+  </article>
+  {% endfor %}
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+  <div class="join mt-8 flex justify-center">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="join-item btn btn-outline">« Prev</a>
+    {% else %}
+    <button class="join-item btn btn-outline" disabled>« Prev</button>
+    {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <button class="join-item btn btn-primary">{{ page }}</button>
+    {% elsif page == 1 %}
+    <a href="{{ '/articles/' | relative_url }}" class="join-item btn btn-outline">{{ page }}</a>
+    {% else %}
+    <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="join-item btn btn-outline">{{ page
+      }}</a>
+    {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="join-item btn btn-outline">Next »</a>
+    {% else %}
+    <button class="join-item btn btn-outline" disabled>Next »</button>
     {% endif %}
   </div>
+  {% endif %}
 </div>
