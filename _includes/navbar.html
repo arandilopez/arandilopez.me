@@ -1,0 +1,26 @@
+<nav class="sticky navbar px-4 md:px-6 lg:px-8">
+  <div class="navbar-start">
+    <a href="/" class="btn btn-ghost normal-case text-xl">
+      {{ site.title }}
+    </a>
+  </div>
+  <div class="hidden md:navbar-end">
+    <div class="menu menu-horizontal">
+      {% include nav_links.html %}
+    </div>
+  </div>
+  <div class="md:hidden navbar-end">
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          class="inline-block h-5 w-5 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[999] mt-3 w-52 p-2 shadow">
+        {% include nav_links.html %}
+      </ul>
+    </div>
+  </div>
+</nav>

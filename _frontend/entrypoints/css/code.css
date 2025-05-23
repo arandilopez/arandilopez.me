@@ -1,0 +1,179 @@
+/* Catppuccin Latte (Light Theme) */
+.highlight {
+  background-color: #eff1f5; /* Latte Base */
+  color: #4c4f69; /* Latte Text */
+  padding: 1em;
+  overflow: auto;
+  border-radius: 0.5em;
+}
+
+.highlight .hll { background-color: #ccd0da; } /* Latte Surface0 - Highlighted line */
+
+/* Comments */
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cp { color: #9ca0b0; } /* Latte Overlay0 */
+.highlight .cs { color: #ea76cb; font-weight: bold; } /* Latte Pink */
+
+/* Error */
+.highlight .err,
+.highlight .gr { color: #d20f39; } /* Latte Red */
+.highlight .err { background-color: #e6e9ef; } /* Latte Mantle for error background */
+
+/* Keywords */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr { color: #8839ef; font-weight: bold; } /* Latte Mauve */
+.highlight .kt { color: #179299; font-weight: bold; } /* Latte Teal */
+
+/* Operators */
+.highlight .o,
+.highlight .ow { color: #04a5e5; } /* Latte Sky */
+.highlight .ow { font-weight: bold; }
+
+/* Literals */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il { color: #fe640b; font-weight: bold; } /* Latte Peach */
+
+.highlight .s,  /* String */
+.highlight .sb, /* String.Backtick */
+.highlight .s2, /* String.Double */
+.highlight .sh, /* String.Heredoc */
+.highlight .s1 { color: #40a02b; background-color: transparent; } /* Latte Green */
+.highlight .sc { color: #40a02b; background-color: transparent; } /* Latte Green (String.Char) */
+.highlight .sd { color: #7c7f93; background-color: transparent; } /* Latte Overlay1 (String.Doc) */
+.highlight .se { color: #fe640b; font-weight: bold; background-color: transparent; } /* Latte Peach (String.Escape) */
+.highlight .si { color: #ea76cb; background-color: transparent; } /* Latte Pink (String.Interpol) */
+.highlight .sx { color: #40a02b; background-color: transparent; } /* Latte Green (String.Other) */
+.highlight .sr { color: #df8e1d; background-color: transparent; } /* Latte Yellow (String.Regex) */
+.highlight .ss { color: #179299; background-color: transparent; } /* Latte Teal (String.Symbol) */
+
+/* Names */
+.highlight .na { color: #ea76cb; } /* Latte Pink (Name.Attribute) */
+.highlight .nb { color: #df8e1d; } /* Latte Yellow (Name.Builtin) */
+.highlight .bp { color: #df8e1d; } /* Latte Yellow (Name.Builtin.Pseudo) */
+.highlight .nc { color: #209fb5; font-weight: bold; } /* Latte Sapphire (Name.Class) */
+.highlight .no { color: #fe640b; font-weight: bold; } /* Latte Peach (Name.Constant) */
+.highlight .nd { color: #7287fd; font-weight: bold; } /* Latte Lavender (Name.Decorator) */
+.highlight .ni { color: #1e66f5; font-weight: bold; } /* Latte Blue (Name.Entity) */
+.highlight .ne { color: #d20f39; font-weight: bold; } /* Latte Red (Name.Exception) */
+.highlight .nf { color: #1e66f5; font-weight: bold; } /* Latte Blue (Name.Function) */
+.highlight .nl { color: #209fb5; font-weight: bold; } /* Latte Sapphire (Name.Label) */
+.highlight .nn { color: #209fb5; font-weight: bold; } /* Latte Sapphire (Name.Namespace) */
+.highlight .nt { color: #dd7878; } /* Latte Flamingo (Name.Tag) */
+.highlight .nv { color: #4c4f69; } /* Latte Text (Name.Variable) */
+.highlight .vc { color: #179299; } /* Latte Teal (Name.Variable.Class) */
+.highlight .vg { color: #d20f39; font-weight: bold; } /* Latte Red (Name.Variable.Global) */
+.highlight .vi { color: #179299; } /* Latte Teal (Name.Variable.Instance) */
+
+/* Generic */
+.highlight .gd { color: #d20f39; } /* Latte Red */
+.highlight .ge { font-style: italic; }
+.highlight .gh { color: #1e66f5; font-weight: bold; } /* Latte Blue */
+.highlight .gi { color: #40a02b; } /* Latte Green */
+.highlight .go { color: #7c7f93; } /* Latte Overlay1 */
+.highlight .gp { color: #04a5e5; font-weight: bold; } /* Latte Sky */
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #209fb5; font-weight: bold; } /* Latte Sapphire */
+.highlight .gt { color: #d20f39; } /* Latte Red */
+
+/* Text */
+.highlight .w { color: #bcc0cc; } /* Latte Surface1 (Whitespace) */
+
+
+/* Catppuccin Frappe (Dark Theme) */
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background-color: #303446; /* Frappe Base */
+    color: #c6d0f5; /* Frappe Text */
+  }
+
+  .highlight .hll { background-color: #414559; } /* Frappe Surface0 */
+
+  /* Comments */
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1,
+  .highlight .cp { color: #737994; } /* Frappe Overlay0 */
+  .highlight .cs { color: #f4b8e4; font-weight: bold; } /* Frappe Pink */
+
+  /* Error */
+  .highlight .err,
+  .highlight .gr { color: #e78284; } /* Frappe Red */
+  .highlight .err { background-color: #292c3c; } /* Frappe Mantle */
+
+  /* Keywords */
+  .highlight .k,
+  .highlight .kc,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr { color: #ca9ee6; font-weight: bold; } /* Frappe Mauve */
+  .highlight .kt { color: #81c8be; font-weight: bold; } /* Frappe Teal */
+
+  /* Operators */
+  .highlight .o,
+  .highlight .ow { color: #99d1db; } /* Frappe Sky */
+  .highlight .ow { font-weight: bold; }
+
+  /* Literals */
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .mo,
+  .highlight .il { color: #ef9f76; font-weight: bold; } /* Frappe Peach */
+
+  .highlight .s,
+  .highlight .sb,
+  .highlight .s2,
+  .highlight .sh,
+  .highlight .s1 { color: #a6d189; background-color: transparent; } /* Frappe Green */
+  .highlight .sc { color: #a6d189; background-color: transparent; } /* Frappe Green (String.Char) */
+  .highlight .sd { color: #838ba7; background-color: transparent; } /* Frappe Overlay1 (String.Doc) */
+  .highlight .se { color: #ef9f76; font-weight: bold; background-color: transparent; } /* Frappe Peach (String.Escape) */
+  .highlight .si { color: #f4b8e4; background-color: transparent; } /* Frappe Pink (String.Interpol) */
+  .highlight .sx { color: #a6d189; background-color: transparent; } /* Frappe Green (String.Other) */
+  .highlight .sr { color: #e5c890; background-color: transparent; } /* Frappe Yellow (String.Regex) */
+  .highlight .ss { color: #81c8be; background-color: transparent; } /* Frappe Teal (String.Symbol) */
+
+  /* Names */
+  .highlight .na { color: #f4b8e4; } /* Frappe Pink (Name.Attribute) */
+  .highlight .nb { color: #e5c890; } /* Frappe Yellow (Name.Builtin) */
+  .highlight .bp { color: #e5c890; } /* Frappe Yellow (Name.Builtin.Pseudo) */
+  .highlight .nc { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire (Name.Class) */
+  .highlight .no { color: #ef9f76; font-weight: bold; } /* Frappe Peach (Name.Constant) */
+  .highlight .nd { color: #babbf1; font-weight: bold; } /* Frappe Lavender (Name.Decorator) */
+  .highlight .ni { color: #8caaee; font-weight: bold; } /* Frappe Blue (Name.Entity) */
+  .highlight .ne { color: #e78284; font-weight: bold; } /* Frappe Red (Name.Exception) */
+  .highlight .nf { color: #8caaee; font-weight: bold; } /* Frappe Blue (Name.Function) */
+  .highlight .nl { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire (Name.Label) */
+  .highlight .nn { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire (Name.Namespace) */
+  .highlight .nt { color: #eebebe; } /* Frappe Flamingo (Name.Tag) */
+  .highlight .nv { color: #c6d0f5; } /* Frappe Text (Name.Variable) */
+  .highlight .vc { color: #81c8be; } /* Frappe Teal (Name.Variable.Class) */
+  .highlight .vg { color: #e78284; font-weight: bold; } /* Frappe Red (Name.Variable.Global) */
+  .highlight .vi { color: #81c8be; } /* Frappe Teal (Name.Variable.Instance) */
+
+  /* Generic */
+  .highlight .gd { color: #e78284; } /* Frappe Red */
+  /* .highlight .ge is font-style only */
+  .highlight .gh { color: #8caaee; font-weight: bold; } /* Frappe Blue */
+  .highlight .gi { color: #a6d189; } /* Frappe Green */
+  .highlight .go { color: #838ba7; } /* Frappe Overlay1 */
+  .highlight .gp { color: #99d1db; font-weight: bold; } /* Frappe Sky */
+  /* .highlight .gs is font-weight only */
+  .highlight .gu { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire */
+  .highlight .gt { color: #e78284; } /* Frappe Red */
+
+  /* Text */
+  .highlight .w { color: #51576d; } /* Frappe Surface1 (Whitespace) */
+}

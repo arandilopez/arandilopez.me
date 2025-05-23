@@ -1,0 +1,17 @@
+{
+  "name": "Arandi López",
+  "version": "3.0",
+  "manifest_version": 3,
+  "icons": [
+    {
+      "src": "/assets/android-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "display": "standalone",
+  "short_name": "Arandi López",
+  "start_url": "/"
+}
