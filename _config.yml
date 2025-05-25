@@ -79,6 +79,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - exe/
   - package.json
   - package-lock.json
   - README.md
