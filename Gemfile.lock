@@ -65,6 +65,8 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
+    jekyll-compose (0.12.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-og-image (2.0.0)
@@ -77,6 +79,8 @@ GEM
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-vite (3.0.4)
       jekyll (>= 3, < 5)
       rackup (~> 0.2)
@@ -184,11 +188,14 @@ PLATFORMS
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.4.1)
+  jekyll-compose
   jekyll-feed (~> 0.12)
   jekyll-og-image
   jekyll-paginate (~> 1.1)
   jekyll-seo-tag
+  jekyll-sitemap (~> 1.4)
   jekyll-vite
+  ruby-vips
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1)

@@ -47,6 +47,7 @@ plugins:
   - jekyll-paginate # Added for pagination
   - jekyll-seo-tag
   - jekyll-og-image
+  - jekyll-sitemap
 
 # Pagination settings
 paginate: 5
