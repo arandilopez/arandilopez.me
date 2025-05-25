@@ -22,7 +22,7 @@ permalink: /about/
 
       <!-- Sidebar Column: Image and Social Links (Order 2 on mobile and desktop) -->
       <div class="md:w-1/3 flex flex-col items-center">
-        <img src="{{ '/images/arandilopez.jpg' | relative_url }}" alt="Arandi Lopez" class="mask mask-squircle w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-cover mb-6 shadow-lg" />
+        <img src="{{ '/assets/images/arandilopez.jpg' | relative_url }}" alt="Arandi Lopez" class="mask mask-squircle w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-cover mb-6 shadow-lg" />
         <section class="w-full">
           <h2 class="text-xl sm:text-2xl font-semibold mt-0 mb-4 text-center md:text-left">Connect With Me</h2>
           <ul class="space-y-3">
@@ -57,3 +57,4 @@ permalink: /about/
     </div>
   </div>
 </div>
+

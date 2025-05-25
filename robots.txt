@@ -1,0 +1,6 @@
+---
+layout: null
+---
+
+user-agent: EmailCollector
+disallow: /
