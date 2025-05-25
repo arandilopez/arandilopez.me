@@ -33,7 +33,7 @@ github:
 og_image:
   collections: ["posts", "pages"]
   domain: "arandilopez.dev"
-  image: "/assets/images/arandilopez.jpg"
+  image: "/assets/images/arandilopez.webp"
   border_bottom:
     width: 20
     fill:
