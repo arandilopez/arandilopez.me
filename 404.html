@@ -1,12 +1,18 @@
 ---
 layout: page
 permalink: /404.html
+title: "404 - Page Not Found"
 ---
 
-<div class="container">
-  <h1>404</h1>
-
-  <h2>Page not found :(</h2>
-
-  <p>The requested page could not be found.</p>
+<div class="min-h-[calc(100vh-var(--nav-h,4rem))] flex flex-col items-center justify-center text-center px-4">
+  <div class="max-w-md">
+    <h1 class="text-8xl md:text-9xl font-bold text-primary mb-4">404</h1>
+    <h2 class="text-3xl md:text-4xl font-semibold text-base-content mb-6">Oops! Page Not Found.</h2>
+    <p class="text-lg mb-8">
+      Sorry, the page you are looking for doesn't exist or has been moved.
+    </p>
+    <a href="{{ '/' | relative_url }}" class="btn btn-primary normal-case text-lg">
+      Go Back Home
+    </a>
+  </div>
 </div>
