@@ -39,15 +39,18 @@ og_image:
     fill:
       - "#4285F4"
 
+tailwindcss:
+  css_path: ./_data/tailwind/styles.css
+
 # Build settings
 # theme: minima
 plugins:
-  - jekyll/vite
   - jekyll-feed
   - jekyll-paginate # Added for pagination
   - jekyll-seo-tag
   - jekyll-og-image
   - jekyll-sitemap
+  - jekyll-tailwindcss
 
 # Pagination settings
 paginate: 5

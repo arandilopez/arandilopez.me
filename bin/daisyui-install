@@ -1,0 +1,5 @@
+#! /bin/sh
+
+curl -sLo _data/tailwind/daisyui.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
+
+curl -sLo _data/tailwind/daisyui-theme.js https://github.com/saadeghi/daisyui/releases/latest/download/daisyui-theme.js

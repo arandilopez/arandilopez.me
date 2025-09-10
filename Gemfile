@@ -13,7 +13,7 @@ group :jekyll_plugins do
   gem 'jekyll-og-image'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap', '~> 1.4'
-  gem 'jekyll-vite'
+  gem 'jekyll-tailwindcss'
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
