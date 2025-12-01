@@ -2,9 +2,8 @@
 
 set -e
 
-if which overmind >/dev/null; then
-  overmind start -f Procfile.dev
+if which foreman >/dev/null; then
+  foreman start -f Procfile.dev
 else
-  echo "Install overmind or modify exe/dev to use a different Procfile launcher."
-  echo "https://github.com/DarthSim/overmind"
+  echo "Install foreman or modify exe/dev to use a different Procfile launcher."
 fi
