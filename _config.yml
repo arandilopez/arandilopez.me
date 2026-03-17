@@ -88,3 +88,4 @@ exclude:
   - package-lock.json
   - README.md
   - Rakefile
+  - mise.toml
