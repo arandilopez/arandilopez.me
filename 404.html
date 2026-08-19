@@ -1,18 +1,38 @@
 ---
 layout: page
 permalink: /404.html
-title: "404 - Page Not Found"
+title: "404 - Route Not Found"
 ---
 
-<div class="min-h-[calc(100vh-var(--nav-h,4rem))] flex flex-col items-center justify-center text-center px-4">
-  <div class="max-w-md">
-    <h1 class="text-8xl md:text-9xl font-bold text-primary mb-4">404</h1>
-    <h2 class="text-3xl md:text-4xl font-semibold text-base-content mb-6">Oops! Page Not Found.</h2>
-    <p class="text-lg mb-8">
-      Sorry, the page you are looking for doesn't exist or has been moved.
-    </p>
-    <a href="{{ '/' | relative_url }}" class="btn btn-primary normal-case text-lg">
-      Go Back Home
-    </a>
+<div class="py-8 md:py-16 flex flex-col items-center justify-center">
+  <div class="terminal-window max-w-lg w-full shadow-lg">
+    <div class="terminal-bar">
+      <span class="terminal-dot bg-error/80"></span>
+      <span class="terminal-dot bg-warning/80"></span>
+      <span class="terminal-dot bg-success/80"></span>
+      <span class="font-mono text-xs text-base-content/60 ml-2">error://404_not_found</span>
+    </div>
+    <div class="p-6 font-mono text-xs sm:text-sm space-y-4 bg-base-200/50">
+      <div>
+        <p class="text-error font-bold text-base sm:text-lg mb-1">[ERROR 404] Route Not Found</p>
+        <p class="text-base-content/70">The requested path does not exist or has been relocated.</p>
+      </div>
+
+      <div class="p-3 rounded bg-base-100/80 border border-base-300 space-y-1">
+        <p class="text-base-content/60"><span class="text-primary font-bold">$</span> curl -I https://arandilopez.me/path</p>
+        <p class="text-error">HTTP/2 404 Not Found</p>
+        <p class="text-base-content/60">status: destination unreachable</p>
+      </div>
+
+      <div class="pt-2 flex flex-wrap gap-3">
+        <a href="{{ '/' | relative_url }}" class="btn btn-primary btn-sm font-mono text-xs">
+          &larr; cd /home
+        </a>
+        <a href="{{ '/articles/' | relative_url }}" class="btn btn-outline btn-sm font-mono text-xs">
+          cd /articles
+        </a>
+      </div>
+    </div>
   </div>
 </div>
+

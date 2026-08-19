@@ -1,39 +1,89 @@
 ---
 layout: default
 ---
-<div class="container mx-auto max-w-3xl px-4 py-8">
-  <article class="prose md:prose-lg lg:prose-xl max-w-none dark:prose-invert">
-    <h1 class="!text-3xl md:!text-4xl lg:!text-5xl !font-extrabold !leading-tight !mb-3">
-      {{ page.title }}
-    </h1>
 
-    {% if page.date or page.tags.size > 0 %}
-    <div class="flex flex-wrap items-center text-sm mb-6">
-      {% if page.date %}
-      <time datetime="{{ page.date | date_to_xmlschema }}" class="mr-4">
-        Published on {{ page.date | date: "%B %d, %Y" }}
-      </time>
-      {% endif %}
-      {% if page.tags.size > 0 %}
-      <div class="flex items-center">
-        <span class="font-semibold mr-2">Tags:</span>
-        <div class="flex flex-wrap">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+  <!-- Tech Breadcrumb Header -->
+  <div class="font-mono text-xs text-base-content/60 mb-6 flex items-center gap-1.5 flex-wrap">
+    <a href="{{ '/' | relative_url }}" class="hover:text-primary transition-colors">~</a>
+    <span class="opacity-40">/</span>
+    <a href="{{ '/articles/' | relative_url }}" class="hover:text-primary transition-colors">articles</a>
+    <span class="opacity-40">/</span>
+    <span class="text-base-content/90 truncate max-w-xs">{{ page.title | slugify }}</span>
+  </div>
+
+  <article>
+    <!-- Post Header -->
+    <header class="mb-8">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-base-content mb-4 leading-tight">
+        {{ page.title }}
+      </h1>
+
+      {% assign words = content | number_of_words %}
+      {% assign reading_time = words | divided_by: 200 %}
+      {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+
+      <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-base-content/70 pb-6 border-b border-base-300">
+        {% if page.date %}
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="flex items-center gap-1">
+          <span class="opacity-50">date:</span>
+          <span class="text-base-content font-medium">{{ page.date | date: "%Y-%m-%d" }}</span>
+        </time>
+        <span class="text-base-300">•</span>
+        {% endif %}
+
+        <span class="flex items-center gap-1">
+          <span class="opacity-50">read:</span>
+          <span>~{{ reading_time }} min ({{ words }} words)</span>
+        </span>
+
+        {% if page.tags.size > 0 %}
+        <span class="text-base-300">•</span>
+        <div class="flex flex-wrap items-center gap-1.5">
           {% for tag in page.tags %}
-          <span class="mr-1 mb-1 px-2 py-1 bg-base-200 text-base-content rounded text-xs">{{ tag }}</span>
+          <span class="mono-badge">#{{ tag }}</span>
           {% endfor %}
         </div>
+        {% endif %}
       </div>
+
+      {% if page.description %}
+      <p class="text-lg sm:text-xl text-base-content/80 mt-6 leading-relaxed font-normal italic border-l-2 border-primary/60 pl-4 py-1">
+        {{ page.description }}
+      </p>
       {% endif %}
+    </header>
+
+    <!-- Post Body -->
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      {{ content }}
     </div>
-    {% endif %}
 
-    {% if page.description %}
-    <p class="text-xl md:text-2xl font-normal text-gray-700 dark:text-gray-300 mb-8">
-      {{ page.description }}
-    </p>
-    {% endif %}
+    <!-- Post Navigation Links -->
+    <nav class="mt-16 pt-8 border-t border-base-300 grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-sm">
+      {% if page.previous.url %}
+      <a href="{{ page.previous.url | relative_url }}" class="p-4 rounded-lg border border-base-300 hover:border-primary/50 bg-base-200/40 hover:bg-base-200 transition-all flex flex-col gap-1 group">
+        <span class="text-xs text-base-content/60 group-hover:text-primary transition-colors">&larr; previous post</span>
+        <span class="font-sans font-medium text-base-content line-clamp-1 group-hover:text-primary transition-colors">{{ page.previous.title }}</span>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
 
-    {{ content }}
-    
+      {% if page.next.url %}
+      <a href="{{ page.next.url | relative_url }}" class="p-4 rounded-lg border border-base-300 hover:border-primary/50 bg-base-200/40 hover:bg-base-200 transition-all flex flex-col gap-1 group text-right">
+        <span class="text-xs text-base-content/60 group-hover:text-primary transition-colors">next post &rarr;</span>
+        <span class="font-sans font-medium text-base-content line-clamp-1 group-hover:text-primary transition-colors">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+
+    <!-- Return to Articles Button -->
+    <div class="mt-10 text-center">
+      <a href="{{ '/articles/' | relative_url }}" class="inline-flex items-center gap-2 font-mono text-xs px-4 py-2 rounded-md border border-base-300 hover:border-primary bg-base-100 hover:bg-base-200 text-base-content hover:text-primary transition-colors">
+        &larr; return to all articles
+      </a>
+    </div>
   </article>
 </div>
+

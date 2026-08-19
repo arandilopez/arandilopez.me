@@ -3,15 +3,124 @@ layout: home
 title: Arandi Lopez | Software Engineer
 ---
 
-<div class="hero min-h-[calc(100vh-var(--nav-h,4rem))] bg-base-100">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <img src="/assets/images/arandilopez.webp" class="mask mask-squircle w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 object-cover rounded-lg shadow-2xl mb-6 lg:mb-0 mx-auto lg:mx-0" alt="Arandi Lopez Profile Picture" />
-    <div class="text-center lg:text-left">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold">Hi, I'm Arandi Lopez!</h1>
-      <p class="py-6">I'm a Software Engineer. This is my personal page where I share <a href="/articles/" class="link link-primary">articles</a> about technology and software engineering.</p>
-      <p class="pb-6">Find more <a href="/about/" class="link link-primary">about me here</a>. Follow me on Twitter as <a href="https://twitter.com/arandilopez" class="link link-primary" target="_blank" rel="noopener noreferrer">@arandilopez</a> and check out my work on my <a href="https://github.com/arandilopez" class="link link-primary" target="_blank" rel="noopener noreferrer">GitHub profile</a>.</p>
-      <a href="/articles/" class="btn btn-primary">Read my Articles</a>
+<!-- Hero Section -->
+<section class="py-4 md:py-8">
+  <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 lg:gap-12">
+    <!-- Bio & Terminal -->
+    <div class="flex-1 text-center lg:text-left">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-base-300 bg-base-200/60 font-mono text-xs text-base-content/80 mb-6">
+        <span class="status-pip"></span>
+        <span>Available for select projects &amp; engineering</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-base-content leading-tight">
+        Hi, I'm <span class="text-primary">Arandi Lopez</span>
+      </h1>
+
+      <p class="mt-4 text-lg text-base-content/80 max-w-2xl leading-relaxed">
+        Software Engineer with 10+ years of experience crafting robust web applications, exploring software architecture, AI-assisted development, and developer tooling.
+      </p>
+
+      <!-- Terminal Dossier Card -->
+      <div class="terminal-window my-6 shadow-sm text-left max-w-2xl">
+        <div class="terminal-bar">
+          <span class="terminal-dot bg-error/70"></span>
+          <span class="terminal-dot bg-warning/70"></span>
+          <span class="terminal-dot bg-success/70"></span>
+          <span class="font-mono text-xs text-base-content/60 ml-2">~ whoami.sh</span>
+        </div>
+        <div class="p-4 sm:p-5 font-mono text-xs sm:text-sm space-y-2 text-base-content/90 bg-base-200/50">
+          <p><span class="text-primary font-bold">$</span> <span class="opacity-60">role:</span> "Software Engineer"</p>
+          <p><span class="text-primary font-bold">$</span> <span class="opacity-60">stack:</span> ["Ruby on Rails", "Node.js", "React", "AI Tooling", "Tailwind"]</p>
+          <p><span class="text-primary font-bold">$</span> <span class="opacity-60">current_vibe:</span> "Building durable web systems &amp; sharing technical notes"</p>
+        </div>
+      </div>
+
+      <!-- Action Buttons & Social Links -->
+      <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-6">
+        <a href="{{ '/articles/' | relative_url }}" class="btn btn-primary font-mono text-xs sm:text-sm shadow-sm gap-2">
+          <span>Read Articles</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="{{ '/about/' | relative_url }}" class="btn btn-outline font-mono text-xs sm:text-sm">
+          <span>About Me</span>
+        </a>
+        <a href="https://github.com/arandilopez" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-square text-base-content hover:text-primary" title="GitHub">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://twitter.com/arandilopez" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-square text-base-content hover:text-primary" title="Twitter">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Profile Image Column -->
+    <div class="flex-shrink-0">
+      <div class="relative">
+        <img 
+          src="{{ '/assets/images/arandilopez.webp' | relative_url }}" 
+          alt="Arandi Lopez" 
+          class="w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-cover rounded-2xl border-2 border-base-300 hover:border-primary transition-colors shadow-md"
+        />
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Recent Articles Section -->
+<section class="mt-16 pt-8 border-t border-base-300">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="font-mono text-xs sm:text-sm font-semibold tracking-wider uppercase text-base-content/80 flex items-center gap-2">
+      <span class="text-primary font-bold">//</span>
+      <span>Latest Articles</span>
+    </h2>
+    <a href="{{ '/articles/' | relative_url }}" class="font-mono text-xs text-primary hover:underline flex items-center gap-1">
+      <span>view all</span>
+      <span>&rarr;</span>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {% for post in site.posts limit: 4 %}
+    {% assign words = post.content | number_of_words %}
+    {% assign reading_time = words | divided_by: 200 %}
+    {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+
+    <article class="p-5 rounded-lg border border-base-300 hover:border-primary/40 bg-base-200/30 hover:bg-base-200/60 transition-all flex flex-col justify-between group">
+      <div>
+        <div class="flex items-center justify-between text-xs font-mono text-base-content/60 mb-2">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          <span>~{{ reading_time }} min read</span>
+        </div>
+
+        <h3 class="text-lg font-bold text-base-content group-hover:text-primary transition-colors line-clamp-2">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h3>
+
+        {% if post.excerpt %}
+        <p class="text-sm text-base-content/70 mt-2 line-clamp-2 leading-relaxed">
+          {{ post.excerpt | strip_html | truncatewords: 25 }}
+        </p>
+        {% endif %}
+      </div>
+
+      {% if post.tags.size > 0 %}
+      <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-base-300/60">
+        {% for tag in post.tags limit: 3 %}
+        <span class="mono-badge text-[10px]">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
 

@@ -90,90 +90,155 @@
 
 
 /* Catppuccin Frappe (Dark Theme) */
+[data-theme="dark"] .highlight,
 @media (prefers-color-scheme: dark) {
-  .highlight {
-    background-color: #303446; /* Frappe Base */
+  :root:not([data-theme="light"]) .highlight {
+    background-color: #1e2430; /* Frappe / Slate Base */
     color: #c6d0f5; /* Frappe Text */
   }
 
-  .highlight .hll { background-color: #414559; } /* Frappe Surface0 */
+  :root:not([data-theme="light"]) .highlight .hll { background-color: #414559; } /* Frappe Surface0 */
 
   /* Comments */
-  .highlight .c,
-  .highlight .cm,
-  .highlight .c1,
-  .highlight .cp { color: #737994; } /* Frappe Overlay0 */
-  .highlight .cs { color: #f4b8e4; font-weight: bold; } /* Frappe Pink */
+  :root:not([data-theme="light"]) .highlight .c,
+  :root:not([data-theme="light"]) .highlight .cm,
+  :root:not([data-theme="light"]) .highlight .c1,
+  :root:not([data-theme="light"]) .highlight .cp { color: #737994; }
+  :root:not([data-theme="light"]) .highlight .cs { color: #f4b8e4; font-weight: bold; }
 
   /* Error */
-  .highlight .err,
-  .highlight .gr { color: #e78284; } /* Frappe Red */
-  .highlight .err { background-color: #292c3c; } /* Frappe Mantle */
+  :root:not([data-theme="light"]) .highlight .err,
+  :root:not([data-theme="light"]) .highlight .gr { color: #e78284; }
+  :root:not([data-theme="light"]) .highlight .err { background-color: #292c3c; }
 
   /* Keywords */
-  .highlight .k,
-  .highlight .kc,
-  .highlight .kd,
-  .highlight .kn,
-  .highlight .kp,
-  .highlight .kr { color: #ca9ee6; font-weight: bold; } /* Frappe Mauve */
-  .highlight .kt { color: #81c8be; font-weight: bold; } /* Frappe Teal */
+  :root:not([data-theme="light"]) .highlight .k,
+  :root:not([data-theme="light"]) .highlight .kc,
+  :root:not([data-theme="light"]) .highlight .kd,
+  :root:not([data-theme="light"]) .highlight .kn,
+  :root:not([data-theme="light"]) .highlight .kp,
+  :root:not([data-theme="light"]) .highlight .kr { color: #ca9ee6; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .kt { color: #81c8be; font-weight: bold; }
 
   /* Operators */
-  .highlight .o,
-  .highlight .ow { color: #99d1db; } /* Frappe Sky */
-  .highlight .ow { font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .o,
+  :root:not([data-theme="light"]) .highlight .ow { color: #99d1db; }
+  :root:not([data-theme="light"]) .highlight .ow { font-weight: bold; }
 
   /* Literals */
-  .highlight .m,
-  .highlight .mf,
-  .highlight .mh,
-  .highlight .mi,
-  .highlight .mo,
-  .highlight .il { color: #ef9f76; font-weight: bold; } /* Frappe Peach */
+  :root:not([data-theme="light"]) .highlight .m,
+  :root:not([data-theme="light"]) .highlight .mf,
+  :root:not([data-theme="light"]) .highlight .mh,
+  :root:not([data-theme="light"]) .highlight .mi,
+  :root:not([data-theme="light"]) .highlight .mo,
+  :root:not([data-theme="light"]) .highlight .il { color: #ef9f76; font-weight: bold; }
 
-  .highlight .s,
-  .highlight .sb,
-  .highlight .s2,
-  .highlight .sh,
-  .highlight .s1 { color: #a6d189; background-color: transparent; } /* Frappe Green */
-  .highlight .sc { color: #a6d189; background-color: transparent; } /* Frappe Green (String.Char) */
-  .highlight .sd { color: #838ba7; background-color: transparent; } /* Frappe Overlay1 (String.Doc) */
-  .highlight .se { color: #ef9f76; font-weight: bold; background-color: transparent; } /* Frappe Peach (String.Escape) */
-  .highlight .si { color: #f4b8e4; background-color: transparent; } /* Frappe Pink (String.Interpol) */
-  .highlight .sx { color: #a6d189; background-color: transparent; } /* Frappe Green (String.Other) */
-  .highlight .sr { color: #e5c890; background-color: transparent; } /* Frappe Yellow (String.Regex) */
-  .highlight .ss { color: #81c8be; background-color: transparent; } /* Frappe Teal (String.Symbol) */
+  :root:not([data-theme="light"]) .highlight .s,
+  :root:not([data-theme="light"]) .highlight .sb,
+  :root:not([data-theme="light"]) .highlight .s2,
+  :root:not([data-theme="light"]) .highlight .sh,
+  :root:not([data-theme="light"]) .highlight .s1 { color: #a6d189; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .sc { color: #a6d189; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .sd { color: #838ba7; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .se { color: #ef9f76; font-weight: bold; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .si { color: #f4b8e4; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .sx { color: #a6d189; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .sr { color: #e5c890; background-color: transparent; }
+  :root:not([data-theme="light"]) .highlight .ss { color: #81c8be; background-color: transparent; }
 
   /* Names */
-  .highlight .na { color: #f4b8e4; } /* Frappe Pink (Name.Attribute) */
-  .highlight .nb { color: #e5c890; } /* Frappe Yellow (Name.Builtin) */
-  .highlight .bp { color: #e5c890; } /* Frappe Yellow (Name.Builtin.Pseudo) */
-  .highlight .nc { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire (Name.Class) */
-  .highlight .no { color: #ef9f76; font-weight: bold; } /* Frappe Peach (Name.Constant) */
-  .highlight .nd { color: #babbf1; font-weight: bold; } /* Frappe Lavender (Name.Decorator) */
-  .highlight .ni { color: #8caaee; font-weight: bold; } /* Frappe Blue (Name.Entity) */
-  .highlight .ne { color: #e78284; font-weight: bold; } /* Frappe Red (Name.Exception) */
-  .highlight .nf { color: #8caaee; font-weight: bold; } /* Frappe Blue (Name.Function) */
-  .highlight .nl { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire (Name.Label) */
-  .highlight .nn { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire (Name.Namespace) */
-  .highlight .nt { color: #eebebe; } /* Frappe Flamingo (Name.Tag) */
-  .highlight .nv { color: #c6d0f5; } /* Frappe Text (Name.Variable) */
-  .highlight .vc { color: #81c8be; } /* Frappe Teal (Name.Variable.Class) */
-  .highlight .vg { color: #e78284; font-weight: bold; } /* Frappe Red (Name.Variable.Global) */
-  .highlight .vi { color: #81c8be; } /* Frappe Teal (Name.Variable.Instance) */
+  :root:not([data-theme="light"]) .highlight .na { color: #f4b8e4; }
+  :root:not([data-theme="light"]) .highlight .nb { color: #e5c890; }
+  :root:not([data-theme="light"]) .highlight .bp { color: #e5c890; }
+  :root:not([data-theme="light"]) .highlight .nc { color: #85c1dc; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .no { color: #ef9f76; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .nd { color: #babbf1; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .ni { color: #8caaee; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .ne { color: #e78284; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .nf { color: #8caaee; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .nl { color: #85c1dc; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .nn { color: #85c1dc; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .nt { color: #eebebe; }
+  :root:not([data-theme="light"]) .highlight .nv { color: #c6d0f5; }
+  :root:not([data-theme="light"]) .highlight .vc { color: #81c8be; }
+  :root:not([data-theme="light"]) .highlight .vg { color: #e78284; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .vi { color: #81c8be; }
 
   /* Generic */
-  .highlight .gd { color: #e78284; } /* Frappe Red */
-  /* .highlight .ge is font-style only */
-  .highlight .gh { color: #8caaee; font-weight: bold; } /* Frappe Blue */
-  .highlight .gi { color: #a6d189; } /* Frappe Green */
-  .highlight .go { color: #838ba7; } /* Frappe Overlay1 */
-  .highlight .gp { color: #99d1db; font-weight: bold; } /* Frappe Sky */
-  /* .highlight .gs is font-weight only */
-  .highlight .gu { color: #85c1dc; font-weight: bold; } /* Frappe Sapphire */
-  .highlight .gt { color: #e78284; } /* Frappe Red */
+  :root:not([data-theme="light"]) .highlight .gd { color: #e78284; }
+  :root:not([data-theme="light"]) .highlight .gh { color: #8caaee; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .gi { color: #a6d189; }
+  :root:not([data-theme="light"]) .highlight .go { color: #838ba7; }
+  :root:not([data-theme="light"]) .highlight .gp { color: #99d1db; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .gu { color: #85c1dc; font-weight: bold; }
+  :root:not([data-theme="light"]) .highlight .gt { color: #e78284; }
 
   /* Text */
-  .highlight .w { color: #51576d; } /* Frappe Surface1 (Whitespace) */
+  :root:not([data-theme="light"]) .highlight .w { color: #51576d; }
 }
+
+[data-theme="dark"] .highlight {
+  background-color: #1e2430;
+  color: #c6d0f5;
+}
+[data-theme="dark"] .highlight .hll { background-color: #414559; }
+[data-theme="dark"] .highlight .c,
+[data-theme="dark"] .highlight .cm,
+[data-theme="dark"] .highlight .c1,
+[data-theme="dark"] .highlight .cp { color: #737994; }
+[data-theme="dark"] .highlight .cs { color: #f4b8e4; font-weight: bold; }
+[data-theme="dark"] .highlight .err,
+[data-theme="dark"] .highlight .gr { color: #e78284; }
+[data-theme="dark"] .highlight .err { background-color: #292c3c; }
+[data-theme="dark"] .highlight .k,
+[data-theme="dark"] .highlight .kc,
+[data-theme="dark"] .highlight .kd,
+[data-theme="dark"] .highlight .kn,
+[data-theme="dark"] .highlight .kp,
+[data-theme="dark"] .highlight .kr { color: #ca9ee6; font-weight: bold; }
+[data-theme="dark"] .highlight .kt { color: #81c8be; font-weight: bold; }
+[data-theme="dark"] .highlight .o,
+[data-theme="dark"] .highlight .ow { color: #99d1db; }
+[data-theme="dark"] .highlight .ow { font-weight: bold; }
+[data-theme="dark"] .highlight .m,
+[data-theme="dark"] .highlight .mf,
+[data-theme="dark"] .highlight .mh,
+[data-theme="dark"] .highlight .mi,
+[data-theme="dark"] .highlight .mo,
+[data-theme="dark"] .highlight .il { color: #ef9f76; font-weight: bold; }
+[data-theme="dark"] .highlight .s,
+[data-theme="dark"] .highlight .sb,
+[data-theme="dark"] .highlight .s2,
+[data-theme="dark"] .highlight .sh,
+[data-theme="dark"] .highlight .s1 { color: #a6d189; background-color: transparent; }
+[data-theme="dark"] .highlight .sc { color: #a6d189; background-color: transparent; }
+[data-theme="dark"] .highlight .sd { color: #838ba7; background-color: transparent; }
+[data-theme="dark"] .highlight .se { color: #ef9f76; font-weight: bold; background-color: transparent; }
+[data-theme="dark"] .highlight .si { color: #f4b8e4; background-color: transparent; }
+[data-theme="dark"] .highlight .sx { color: #a6d189; background-color: transparent; }
+[data-theme="dark"] .highlight .sr { color: #e5c890; background-color: transparent; }
+[data-theme="dark"] .highlight .ss { color: #81c8be; background-color: transparent; }
+[data-theme="dark"] .highlight .na { color: #f4b8e4; }
+[data-theme="dark"] .highlight .nb { color: #e5c890; }
+[data-theme="dark"] .highlight .bp { color: #e5c890; }
+[data-theme="dark"] .highlight .nc { color: #85c1dc; font-weight: bold; }
+[data-theme="dark"] .highlight .no { color: #ef9f76; font-weight: bold; }
+[data-theme="dark"] .highlight .nd { color: #babbf1; font-weight: bold; }
+[data-theme="dark"] .highlight .ni { color: #8caaee; font-weight: bold; }
+[data-theme="dark"] .highlight .ne { color: #e78284; font-weight: bold; }
+[data-theme="dark"] .highlight .nf { color: #8caaee; font-weight: bold; }
+[data-theme="dark"] .highlight .nl { color: #85c1dc; font-weight: bold; }
+[data-theme="dark"] .highlight .nn { color: #85c1dc; font-weight: bold; }
+[data-theme="dark"] .highlight .nt { color: #eebebe; }
+[data-theme="dark"] .highlight .nv { color: #c6d0f5; }
+[data-theme="dark"] .highlight .vc { color: #81c8be; }
+[data-theme="dark"] .highlight .vg { color: #e78284; font-weight: bold; }
+[data-theme="dark"] .highlight .vi { color: #81c8be; }
+[data-theme="dark"] .highlight .gd { color: #e78284; }
+[data-theme="dark"] .highlight .gh { color: #8caaee; font-weight: bold; }
+[data-theme="dark"] .highlight .gi { color: #a6d189; }
+[data-theme="dark"] .highlight .go { color: #838ba7; }
+[data-theme="dark"] .highlight .gp { color: #99d1db; font-weight: bold; }
+[data-theme="dark"] .highlight .gu { color: #85c1dc; font-weight: bold; }
+[data-theme="dark"] .highlight .gt { color: #e78284; }
+[data-theme="dark"] .highlight .w { color: #51576d; }

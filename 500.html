@@ -1,18 +1,38 @@
 ---
 layout: page
 permalink: /500.html
-title: "500 - Internal Server Error"
+title: "500 - Internal Error"
 ---
 
-<div class="min-h-[calc(100vh-var(--nav-h,4rem))] flex flex-col items-center justify-center text-center px-4">
-  <div class="max-w-md">
-    <h1 class="text-8xl md:text-9xl font-bold text-error mb-4">500</h1>
-    <h2 class="text-3xl md:text-4xl font-semibold text-base-content mb-6">Oops! Something Went Wrong.</h2>
-    <p class="text-lg mb-8">
-      We seem to be having some technical difficulties. Please try again later, or contact support if the problem persists.
-    </p>
-    <a href="{{ '/' | relative_url }}" class="btn btn-primary normal-case text-lg">
-      Go Back Home
-    </a>
+<div class="py-8 md:py-16 flex flex-col items-center justify-center">
+  <div class="terminal-window max-w-lg w-full shadow-lg">
+    <div class="terminal-bar">
+      <span class="terminal-dot bg-error/80"></span>
+      <span class="terminal-dot bg-warning/80"></span>
+      <span class="terminal-dot bg-success/80"></span>
+      <span class="font-mono text-xs text-base-content/60 ml-2">error://500_server_error</span>
+    </div>
+    <div class="p-6 font-mono text-xs sm:text-sm space-y-4 bg-base-200/50">
+      <div>
+        <p class="text-error font-bold text-base sm:text-lg mb-1">[ERROR 500] Internal Server Error</p>
+        <p class="text-base-content/70">An unexpected exception occurred during request execution.</p>
+      </div>
+
+      <div class="p-3 rounded bg-base-100/80 border border-base-300 space-y-1">
+        <p class="text-base-content/60"><span class="text-primary font-bold">$</span> tail -n 1 /var/log/app.log</p>
+        <p class="text-error">RuntimeError: execution interrupted</p>
+        <p class="text-base-content/60">status: system recovering</p>
+      </div>
+
+      <div class="pt-2 flex flex-wrap gap-3">
+        <a href="{{ '/' | relative_url }}" class="btn btn-primary btn-sm font-mono text-xs">
+          &larr; cd /home
+        </a>
+        <a href="https://github.com/arandilopez/arandilopez.me/issues" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm font-mono text-xs">
+          report issue &rarr;
+        </a>
+      </div>
+    </div>
   </div>
 </div>
+

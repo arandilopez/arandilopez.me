@@ -13,13 +13,8 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+# These are used to personalize your new site.
 title: Arandi Lopez
-email: arandilopez.93@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This the personal blog of Arandi Lopez, a software engineer and web developer.
   I write about web development, programming, and technology.

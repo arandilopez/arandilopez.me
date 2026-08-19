@@ -1,3 +1,18 @@
-<li><a href="/" class="normal-case">Home</a></li>
-<li><a href="/about" class="normal-case">About</a></li>
-<li><a href="/articles" class="normal-case">Articles</a></li>
+<li>
+  <a href="{{ '/' | relative_url }}" class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url == '/' %}text-primary font-semibold bg-base-200{% endif %}">
+    <span class="opacity-40 text-xs">01.</span>
+    <span>home</span>
+  </a>
+</li>
+<li>
+  <a href="{{ '/articles/' | relative_url }}" class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url contains '/articles' or page.layout == 'post' %}text-primary font-semibold bg-base-200{% endif %}">
+    <span class="opacity-40 text-xs">02.</span>
+    <span>articles</span>
+  </a>
+</li>
+<li>
+  <a href="{{ '/about/' | relative_url }}" class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url contains '/about' %}text-primary font-semibold bg-base-200{% endif %}">
+    <span class="opacity-40 text-xs">03.</span>
+    <span>about</span>
+  </a>
+</li>

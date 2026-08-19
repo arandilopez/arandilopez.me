@@ -18,3 +18,7 @@
 - Edit Tailwind and DaisyUI configuration in `_data/tailwind/styles.css`. `jekyll-tailwindcss` compiles it to `/assets/styles.css` during Jekyll builds; do not hand-edit generated site output in `_site/`.
 - `assets/styles.tailwindcss` is a legacy source file and is not the CSS path configured in `_config.yml`.
 - DaisyUI plugin files are vendored in `_data/tailwind/`. Refresh them only with `bin/daisyui-install`, which downloads the latest release artifacts.
+
+## Testing
+
+- Launch the local server and visit `http://localhost:4000/` to verify that the site renders correctly. Check for broken links, missing images, and layout issues.

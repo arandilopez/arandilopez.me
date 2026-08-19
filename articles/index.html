@@ -1,60 +1,97 @@
 ---
 layout: page
-title: My articles | Arandi Lopez
+title: Articles | Arandi Lopez
 pagination:
   enabled: true
 ---
 
 <div class="max-w-3xl mx-auto">
-  {% for post in paginator.posts %}
-  <article class="py-8 border-b border-base-300 dark:border-base-content/20 last:border-b-0 group">
-    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-      <a href="{{ post.url | relative_url }}" class="link link-hover link-primary group-hover:underline">{{ post.title
-        }}</a>
-    </h2>
-    {% if post.date %}
-    <p class="text-sm text-base-content/70 mb-3">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-    </p>
-    {% endif %}
-    {% if post.excerpt %}
-    <p class="text-sm sm:text-base text-base-content/90 mb-4">
-      {{ post.excerpt | strip_html | truncatewords: 50 }}
-    </p>
-    {% endif %}
-    <div class="mt-4">
-      <a href="{{ post.url | relative_url }}" class="btn btn-ghost btn-sm">
-        Read More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 inline-block" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-      </a>
+  <!-- Archive Header -->
+  <header class="mb-10 pb-6 border-b border-base-300">
+    <div class="font-mono text-xs text-primary font-semibold tracking-wider uppercase mb-2">
+      // 02. Technical Journal &amp; Notes
     </div>
-  </article>
-  {% endfor %}
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-base-content">
+      Articles &amp; Writings
+    </h1>
+    <p class="mt-2 text-base-content/70 text-sm sm:text-base">
+      Reflections on software architecture, Ruby on Rails, AI-assisted development, and developer tooling.
+    </p>
+  </header>
+
+  <!-- Articles List -->
+  <div class="space-y-8">
+    {% for post in paginator.posts %}
+    {% assign words = post.content | number_of_words %}
+    {% assign reading_time = words | divided_by: 200 %}
+    {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
+
+    <article class="p-6 rounded-xl border border-base-300 hover:border-primary/40 bg-base-200/20 hover:bg-base-200/50 transition-all group">
+      <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-base-content/60 mb-3">
+        {% if post.date %}
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="flex items-center gap-1 font-medium text-base-content/80">
+          <span>📅</span>
+          <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+        </time>
+        {% endif %}
+
+        <span class="opacity-75">~{{ reading_time }} min read</span>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-base-content group-hover:text-primary transition-colors mb-3">
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      {% if post.excerpt %}
+      <p class="text-sm sm:text-base text-base-content/75 leading-relaxed mb-4">
+        {{ post.excerpt | strip_html | truncatewords: 40 }}
+      </p>
+      {% endif %}
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-base-300/60">
+        <div class="flex flex-wrap gap-1.5">
+          {% for tag in post.tags %}
+          <span class="mono-badge text-[11px]">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+        <a href="{{ post.url | relative_url }}" class="font-mono text-xs text-primary font-medium group-hover:underline flex items-center gap-1">
+          <span>read article</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
   <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
-  <div class="join mt-8 flex justify-center">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}" class="join-item btn btn-outline">« Prev</a>
-    {% else %}
-    <button class="join-item btn btn-outline" disabled>« Prev</button>
-    {% endif %}
-    {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    <button class="join-item btn btn-primary">{{ page }}</button>
-    {% elsif page == 1 %}
-    <a href="{{ '/articles/' | relative_url }}" class="join-item btn btn-outline">{{ page }}</a>
-    {% else %}
-    <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="join-item btn btn-outline">{{ page
-      }}</a>
-    {% endif %}
-    {% endfor %}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}" class="join-item btn btn-outline">Next »</a>
-    {% else %}
-    <button class="join-item btn btn-outline" disabled>Next »</button>
-    {% endif %}
+  <div class="mt-12 pt-8 border-t border-base-300 flex justify-center">
+    <div class="join font-mono text-xs">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="join-item btn btn-sm btn-outline">&larr; Prev</a>
+      {% else %}
+      <button class="join-item btn btn-sm btn-outline btn-disabled" disabled>&larr; Prev</button>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+      <button class="join-item btn btn-sm btn-primary">{{ page }}</button>
+      {% elsif page == 1 %}
+      <a href="{{ '/articles/' | relative_url }}" class="join-item btn btn-sm btn-outline">{{ page }}</a>
+      {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="join-item btn btn-sm btn-outline">{{ page }}</a>
+      {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="join-item btn btn-sm btn-outline">Next &rarr;</a>
+      {% else %}
+      <button class="join-item btn btn-sm btn-outline btn-disabled" disabled>Next &rarr;</button>
+      {% endif %}
+    </div>
   </div>
   {% endif %}
 </div>
