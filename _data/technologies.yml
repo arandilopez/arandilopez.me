@@ -1,0 +1,37 @@
+- title: "01. Languages & Backend"
+  color: "text-primary"
+  items:
+    - "Ruby"
+    - "Ruby on Rails"
+    - "Node.js"
+    - "TypeScript"
+    - "JavaScript"
+    - "PostgreSQL"
+    - "Redis"
+
+- title: "02. Frontend & UI"
+  color: "text-secondary"
+  items:
+    - "React"
+    - "Tailwind CSS"
+    - "DaisyUI"
+    - "HTML5 / CSS3"
+    - "Jekyll"
+    - "Responsive UI"
+
+- title: "03. Systems & Ops"
+  color: "text-accent"
+  items:
+    - "REST APIs"
+    - "Webhooks"
+    - "Background Jobs"
+    - "GNU/Linux"
+    - "Git & CI/CD"
+
+- title: "04. AI & Tooling"
+  color: "text-info"
+  items:
+    - "LLM Workflows"
+    - "AI Pair Programming"
+    - "Agentic Dev"
+    - "Neovim / VSCode"

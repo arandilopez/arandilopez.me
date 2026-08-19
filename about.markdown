@@ -39,55 +39,16 @@ permalink: /about/
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <!-- Card 1: Backend & Languages -->
+          {% for category in site.data.technologies %}
           <div class="p-4 rounded-lg border border-base-300 bg-base-200/30">
-            <h3 class="font-mono text-xs font-bold text-primary mb-3 uppercase tracking-wide">01. Languages &amp; Backend</h3>
+            <h3 class="font-mono text-xs font-bold {{ category.color }} mb-3 uppercase tracking-wide">{{ category.title }}</h3>
             <div class="flex flex-wrap gap-1.5">
-              <span class="mono-badge">Ruby</span>
-              <span class="mono-badge">Ruby on Rails</span>
-              <span class="mono-badge">Node.js</span>
-              <span class="mono-badge">TypeScript</span>
-              <span class="mono-badge">JavaScript</span>
-              <span class="mono-badge">PostgreSQL</span>
-              <span class="mono-badge">Redis</span>
+              {% for item in category.items %}
+              <span class="mono-badge">{{ item }}</span>
+              {% endfor %}
             </div>
           </div>
-
-          <!-- Card 2: Frontend & Design -->
-          <div class="p-4 rounded-lg border border-base-300 bg-base-200/30">
-            <h3 class="font-mono text-xs font-bold text-secondary mb-3 uppercase tracking-wide">02. Frontend &amp; UI</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="mono-badge">React</span>
-              <span class="mono-badge">Tailwind CSS</span>
-              <span class="mono-badge">DaisyUI</span>
-              <span class="mono-badge">HTML5 / CSS3</span>
-              <span class="mono-badge">Jekyll</span>
-              <span class="mono-badge">Responsive UI</span>
-            </div>
-          </div>
-
-          <!-- Card 3: Architecture & Systems -->
-          <div class="p-4 rounded-lg border border-base-300 bg-base-200/30">
-            <h3 class="font-mono text-xs font-bold text-accent mb-3 uppercase tracking-wide">03. Systems &amp; Ops</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="mono-badge">REST APIs</span>
-              <span class="mono-badge">Webhooks</span>
-              <span class="mono-badge">Background Jobs</span>
-              <span class="mono-badge">GNU/Linux</span>
-              <span class="mono-badge">Git &amp; CI/CD</span>
-            </div>
-          </div>
-
-          <!-- Card 4: AI & Developer Tooling -->
-          <div class="p-4 rounded-lg border border-base-300 bg-base-200/30">
-            <h3 class="font-mono text-xs font-bold text-info mb-3 uppercase tracking-wide">04. AI &amp; Tooling</h3>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="mono-badge">LLM Workflows</span>
-              <span class="mono-badge">AI Pair Programming</span>
-              <span class="mono-badge">Agentic Dev</span>
-              <span class="mono-badge">Neovim / VSCode</span>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </section>
     </div>
