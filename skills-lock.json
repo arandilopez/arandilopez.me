@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "accessibility": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "bffe3d08cfe92ebad63699f74ce29e35c19850ebfbf474c1463183cfe34d6a09"
+    },
+    "chrome-extension-development": {
+      "source": "mindrally/skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "6c561d2efc102fa5b7447cc85285f95676ec12868e69eabafc7189b107a84b93"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "82fb11a63fb1e35ee2469516ed02d54695f783115b1540c0e783197af4240a3a"
+    },
+    "ruby": {
+      "source": "lucianghinda/superpowers-ruby",
+      "sourceType": "autoskills-registry",
+      "computedHash": "3747fdec2cfd63444b9b4a0c6db092f753575a80cfb1c838606ee28eaf30268b"
+    },
+    "seo": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "autoskills-registry",
+      "computedHash": "c184da724d1c61ad077f27418ea8e7e88fd54bcdf98165e18be7e4681cbd5e20"
+    }
+  }
+}

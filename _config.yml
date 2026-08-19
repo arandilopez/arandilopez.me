@@ -89,3 +89,6 @@ exclude:
   - README.md
   - Rakefile
   - mise.toml
+  - AGENTS.md
+  - .agents/
+  - .bundle/
