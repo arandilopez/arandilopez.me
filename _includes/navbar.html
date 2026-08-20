@@ -1,10 +1,10 @@
-<nav class="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16">
+<nav aria-label="Main" class="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16">
   <!-- Brand Logo -->
   <div class="flex items-center gap-3">
     <a href="{{ '/' | relative_url }}" class="group flex items-center gap-1.5 font-bold tracking-tight text-base-content hover:text-primary transition-colors text-base sm:text-lg">
-      <span class="font-mono text-primary font-bold text-base sm:text-lg group-hover:translate-x-0.5 transition-transform">&gt;</span>
+      <span class="font-mono text-primary font-bold text-base sm:text-lg group-hover:translate-x-0.5 transition-transform" aria-hidden="true">&gt;</span>
       <span class="font-bold">arandilopez</span>
-      <span class="font-mono text-xs opacity-50">.dev</span>
+      <span class="font-mono text-xs opacity-50" aria-hidden="true">.dev</span>
     </a>
   </div>
 
@@ -14,16 +14,16 @@
       {% include nav_links.html %}
     </ul>
 
-    <div class="h-4 w-px bg-base-300 mx-2"></div>
+    <div class="h-4 w-px bg-base-300 mx-2" aria-hidden="true"></div>
 
     <!-- Theme Toggle -->
-    <button id="theme-toggle-btn" type="button" aria-label="Toggle theme" class="cursor-pointer p-2 rounded-md border border-base-300 bg-base-100 hover:bg-base-200 text-base-content hover:text-primary transition-colors focus:outline-none" title="Toggle dark/light mode">
+    <button id="theme-toggle-btn" type="button" aria-label="Toggle theme" class="cursor-pointer p-2 rounded-md border border-base-300 bg-base-100 hover:bg-base-200 text-base-content hover:text-primary transition-colors" title="Toggle dark/light mode">
       <!-- Sun icon (shown in dark mode) -->
-      <svg class="hidden [html[data-theme=dark]_&]:block w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="hidden [html[data-theme=dark]_&]:block w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
       <!-- Moon icon (shown in light mode) -->
-      <svg class="block [html[data-theme=dark]_&]:hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="block [html[data-theme=dark]_&]:hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
       </svg>
     </button>
@@ -31,22 +31,22 @@
 
   <!-- Mobile Menu & Theme Toggle -->
   <div class="flex md:hidden items-center gap-2">
-    <button id="theme-toggle-btn-mobile" type="button" aria-label="Toggle theme" class="cursor-pointer p-2 rounded-md border border-base-300 bg-base-100 text-base-content hover:text-primary transition-colors focus:outline-none">
-      <svg class="hidden [html[data-theme=dark]_&]:block w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button id="theme-toggle-btn-mobile" type="button" aria-label="Toggle theme" class="cursor-pointer p-2 rounded-md border border-base-300 bg-base-100 text-base-content hover:text-primary transition-colors">
+      <svg class="hidden [html[data-theme=dark]_&]:block w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
-      <svg class="block [html[data-theme=dark]_&]:hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="block [html[data-theme=dark]_&]:hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
       </svg>
     </button>
 
     <div class="dropdown dropdown-end">
-      <button tabindex="0" role="button" aria-label="Open menu" class="cursor-pointer p-2 rounded-md border border-base-300 bg-base-100 text-base-content hover:text-primary focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current">
+      <button id="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-list" class="cursor-pointer p-2 rounded-md border border-base-300 bg-base-100 text-base-content hover:text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-4 w-4 stroke-current" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-      <ul tabindex="0" class="dropdown-content menu menu-sm bg-base-100 border border-base-300 rounded-lg z-[999] mt-3 w-48 p-2 shadow-xl">
+      <ul id="mobile-menu-list" tabindex="0" class="dropdown-content menu menu-sm bg-base-100 border border-base-300 rounded-lg z-[999] mt-3 w-48 p-2 shadow-xl">
         {% include nav_links.html %}
       </ul>
     </div>
@@ -66,6 +66,46 @@
 
     document.getElementById('theme-toggle-btn')?.addEventListener('click', toggleTheme);
     document.getElementById('theme-toggle-btn-mobile')?.addEventListener('click', toggleTheme);
+
+    // Mobile menu aria-expanded toggling
+    var menuBtn = document.getElementById('mobile-menu-btn');
+    var menuList = document.getElementById('mobile-menu-list');
+    if (menuBtn && menuList) {
+      menuBtn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        this.setAttribute('aria-label', !expanded ? 'Close menu' : 'Open menu');
+      });
+      // Close on outside click
+      document.addEventListener('click', function(e) {
+        if (!menuBtn.contains(e.target) && !menuList.contains(e.target)) {
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.setAttribute('aria-label', 'Open menu');
+        }
+      });
+    }
+
+    // Keyboard navigation: 1 -> Home, 2 -> Articles, 3 -> About
+    document.addEventListener('keydown', function(event) {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) {
+        return;
+      }
+      var target = event.target;
+      if (
+        target &&
+        (target.isContentEditable ||
+         ['INPUT', 'TEXTAREA', 'SELECT'].indexOf(target.tagName) !== -1)
+      ) {
+        return;
+      }
+
+      if (event.key === '1' || event.key === '2' || event.key === '3') {
+        var link = document.querySelector('nav a[aria-keyshortcuts="' + event.key + '"]');
+        if (link && link.href) {
+          window.location.href = link.href;
+        }
+      }
+    });
   })();
 </script>
 

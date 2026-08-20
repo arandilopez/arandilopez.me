@@ -57,7 +57,7 @@ pagination:
           {% endfor %}
         </div>
 
-        <a href="{{ post.url | relative_url }}" class="font-mono text-xs text-primary font-medium group-hover:underline flex items-center gap-1">
+        <a href="{{ post.url | relative_url }}" class="font-mono text-xs text-primary font-medium group-hover:underline flex items-center gap-1" aria-hidden="true" tabindex="-1">
           <span>read article</span>
           <span>&rarr;</span>
         </a>
@@ -68,17 +68,17 @@ pagination:
 
   <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
-  <div class="mt-12 pt-8 border-t border-base-300 flex justify-center">
+  <nav aria-label="Pagination" class="mt-12 pt-8 border-t border-base-300 flex justify-center">
     <div class="join font-mono text-xs">
       {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path | relative_url }}" class="join-item btn btn-sm btn-outline">&larr; Prev</a>
       {% else %}
-      <button class="join-item btn btn-sm btn-outline btn-disabled" disabled>&larr; Prev</button>
+      <button class="join-item btn btn-sm btn-outline btn-disabled" disabled aria-disabled="true">&larr; Prev</button>
       {% endif %}
 
       {% for page in (1..paginator.total_pages) %}
       {% if page == paginator.page %}
-      <button class="join-item btn btn-sm btn-primary">{{ page }}</button>
+      <button class="join-item btn btn-sm btn-primary" aria-current="page">{{ page }}</button>
       {% elsif page == 1 %}
       <a href="{{ '/articles/' | relative_url }}" class="join-item btn btn-sm btn-outline">{{ page }}</a>
       {% else %}
@@ -89,9 +89,9 @@ pagination:
       {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path | relative_url }}" class="join-item btn btn-sm btn-outline">Next &rarr;</a>
       {% else %}
-      <button class="join-item btn btn-sm btn-outline btn-disabled" disabled>Next &rarr;</button>
+      <button class="join-item btn btn-sm btn-outline btn-disabled" disabled aria-disabled="true">Next &rarr;</button>
       {% endif %}
     </div>
-  </div>
+  </nav>
   {% endif %}
 </div>

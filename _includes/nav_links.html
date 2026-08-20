@@ -1,18 +1,18 @@
 <li>
-  <a href="{{ '/' | relative_url }}" class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url == '/' %}text-primary font-semibold bg-base-200{% endif %}">
-    <span class="opacity-40 text-xs">01.</span>
+  <a href="{{ '/' | relative_url }}" aria-keyshortcuts="1" title="Home (Press 1)" {% if page.url == '/' %}aria-current="page"{% endif %} class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url == '/' %}text-primary font-semibold bg-base-200{% endif %}">
+    <span class="opacity-40 text-xs" aria-hidden="true">01.</span>
     <span>home</span>
   </a>
 </li>
 <li>
-  <a href="{{ '/articles/' | relative_url }}" class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url contains '/articles' or page.layout == 'post' %}text-primary font-semibold bg-base-200{% endif %}">
-    <span class="opacity-40 text-xs">02.</span>
+  <a href="{{ '/articles/' | relative_url }}" aria-keyshortcuts="2" title="Articles (Press 2)" {% if page.url contains '/articles' or page.layout == 'post' %}aria-current="page"{% endif %} class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url contains '/articles' or page.layout == 'post' %}text-primary font-semibold bg-base-200{% endif %}">
+    <span class="opacity-40 text-xs" aria-hidden="true">02.</span>
     <span>articles</span>
   </a>
 </li>
 <li>
-  <a href="{{ '/about/' | relative_url }}" class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url contains '/about' %}text-primary font-semibold bg-base-200{% endif %}">
-    <span class="opacity-40 text-xs">03.</span>
+  <a href="{{ '/about/' | relative_url }}" aria-keyshortcuts="3" title="About (Press 3)" {% if page.url contains '/about' %}aria-current="page"{% endif %} class="font-mono text-sm px-3 py-2 rounded-md hover:bg-base-300/50 hover:text-primary transition-colors flex items-center gap-1.5 {% if page.url contains '/about' %}text-primary font-semibold bg-base-200{% endif %}">
+    <span class="opacity-40 text-xs" aria-hidden="true">03.</span>
     <span>about</span>
   </a>
 </li>

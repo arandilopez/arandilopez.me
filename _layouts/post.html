@@ -4,13 +4,13 @@ layout: default
 
 <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-12">
   <!-- Tech Breadcrumb Header -->
-  <div class="font-mono text-xs text-base-content/60 mb-6 flex items-center gap-1.5 flex-wrap">
+  <nav aria-label="Breadcrumb" class="font-mono text-xs text-base-content/60 mb-6 flex items-center gap-1.5 flex-wrap">
     <a href="{{ '/' | relative_url }}" class="hover:text-primary transition-colors">~</a>
-    <span class="opacity-40">/</span>
+    <span class="opacity-40" aria-hidden="true">/</span>
     <a href="{{ '/articles/' | relative_url }}" class="hover:text-primary transition-colors">articles</a>
-    <span class="opacity-40">/</span>
+    <span class="opacity-40" aria-hidden="true">/</span>
     <span class="text-base-content/90 truncate max-w-xs">{{ page.title | slugify }}</span>
-  </div>
+  </nav>
 
   <article>
     <!-- Post Header -->
@@ -60,7 +60,7 @@ layout: default
     </div>
 
     <!-- Post Navigation Links -->
-    <nav class="mt-16 pt-8 border-t border-base-300 grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-sm">
+    <nav aria-label="Post navigation" class="mt-16 pt-8 border-t border-base-300 grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-sm">
       {% if page.previous.url %}
       <a href="{{ page.previous.url | relative_url }}" class="p-4 rounded-lg border border-base-300 hover:border-primary/50 bg-base-200/40 hover:bg-base-200 transition-all flex flex-col gap-1 group">
         <span class="text-xs text-base-content/60 group-hover:text-primary transition-colors">&larr; previous post</span>

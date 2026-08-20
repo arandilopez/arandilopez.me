@@ -69,7 +69,7 @@ permalink: /about/
         <p class="font-mono text-xs text-base-content/60 mt-0.5">Software Engineer</p>
 
         <div class="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] text-base-content/70 px-2.5 py-1 rounded bg-base-100 border border-base-300">
-          <span class="status-pip"></span>
+          <span class="status-pip" aria-hidden="true"></span>
           <span>online / remote</span>
         </div>
       </div>
@@ -86,39 +86,42 @@ permalink: /about/
             href="https://github.com/arandilopez" 
             target="_blank" 
             rel="noopener noreferrer" 
+            aria-label="GitHub profile (opens in new tab)"
             class="w-full flex items-center justify-between p-2.5 rounded-lg border border-base-300 hover:border-primary/50 bg-base-100 hover:bg-base-200 text-base-content hover:text-primary transition-all group"
           >
             <span class="flex items-center gap-2">
-              <span class="opacity-50">$</span>
+              <span class="opacity-50" aria-hidden="true">$</span>
               <span>open github</span>
             </span>
-            <span class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">&rarr;</span>
+            <span class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" aria-hidden="true">&rarr;</span>
           </a>
 
           <a 
             href="https://twitter.com/arandilopez" 
             target="_blank" 
             rel="noopener noreferrer" 
+            aria-label="Twitter/X profile (opens in new tab)"
             class="w-full flex items-center justify-between p-2.5 rounded-lg border border-base-300 hover:border-primary/50 bg-base-100 hover:bg-base-200 text-base-content hover:text-primary transition-all group"
           >
             <span class="flex items-center gap-2">
-              <span class="opacity-50">$</span>
+              <span class="opacity-50" aria-hidden="true">$</span>
               <span>open twitter</span>
             </span>
-            <span class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">&rarr;</span>
+            <span class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" aria-hidden="true">&rarr;</span>
           </a>
 
           <a 
             href="https://linkedin.com/in/arandi-lopez-550795198/" 
             target="_blank" 
             rel="noopener noreferrer" 
+            aria-label="LinkedIn profile (opens in new tab)"
             class="w-full flex items-center justify-between p-2.5 rounded-lg border border-base-300 hover:border-primary/50 bg-base-100 hover:bg-base-200 text-base-content hover:text-primary transition-all group"
           >
             <span class="flex items-center gap-2">
-              <span class="opacity-50">$</span>
+              <span class="opacity-50" aria-hidden="true">$</span>
               <span>open linkedin</span>
             </span>
-            <span class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">&rarr;</span>
+            <span class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
