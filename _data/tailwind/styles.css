@@ -238,3 +238,32 @@
   border-radius: 0.5rem;
   overflow: hidden;
 }
+
+/* Post heading anchors and scroll margins */
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  scroll-margin-top: calc(var(--nav-h, 4rem) + 1.5rem);
+}
+
+.heading-anchor {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-decoration: none !important;
+  color: var(--color-base-content);
+  opacity: 0.35;
+  margin-left: 0.375rem;
+  display: inline-block;
+  vertical-align: baseline;
+  transition: opacity 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+
+.heading-anchor:hover,
+.heading-anchor:focus-visible {
+  opacity: 1;
+  color: var(--color-primary);
+}
+

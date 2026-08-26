@@ -87,3 +87,83 @@ layout: default
   </article>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var headings = document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6');
+
+    function slugify(text) {
+      return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/[\s_-]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    function copyToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      var textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {}
+      textArea.remove();
+      return Promise.resolve();
+    }
+
+    headings.forEach(function(heading) {
+      if (!heading.id) {
+        var baseSlug = slugify(heading.textContent) || 'heading';
+        var slug = baseSlug;
+        var count = 1;
+        while (document.getElementById(slug)) {
+          slug = baseSlug + '-' + count;
+          count++;
+        }
+        heading.id = slug;
+      }
+
+      var headingText = heading.textContent.trim();
+      var anchor = document.createElement('a');
+      anchor.className = 'heading-anchor';
+      anchor.href = '#' + heading.id;
+      anchor.textContent = '#';
+      anchor.setAttribute('aria-label', 'Link to section: ' + headingText);
+
+      anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        var targetUrl = window.location.origin + window.location.pathname + window.location.search + '#' + heading.id;
+
+        copyToClipboard(targetUrl).then(function() {
+          if (window.history && window.history.pushState) {
+            window.history.pushState(null, '', '#' + heading.id);
+          } else {
+            window.location.hash = heading.id;
+          }
+          heading.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      heading.appendChild(anchor);
+    });
+
+    if (window.location.hash) {
+      var targetId = decodeURIComponent(window.location.hash.substring(1));
+      var targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        setTimeout(function() {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  });
+</script>
+
