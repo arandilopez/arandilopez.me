@@ -1,0 +1,5 @@
+# Arandi Lopez
+
+Arandi Lopez is a Mexico-based Software Engineer with more than 10 years of experience building scalable, maintainable, user-centered web applications. This personal site shares practical writing about web development, Ruby on Rails, Node.js, React, software architecture, AI-assisted development, and developer tooling. Learn more on the [home page](https://arandilopez.me/), [About page](https://arandilopez.me/about/).
+
+The [Articles](https://arandilopez.me/articles/) section includes English and Spanish notes on programming, Ruby on Rails webhooks, GNU/Linux, Vim, TensorFlow, and AI orchestration. You can also find Arandi on [GitHub](https://github.com/arandilopez) and [LinkedIn](https://linkedin.com/in/arandi-lopez-550795198/).
