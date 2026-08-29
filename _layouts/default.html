@@ -31,8 +31,10 @@
         } catch (e) {}
       })();
     </script>
-    
-    <script defer src="https://assets.onedollarstats.com/stonks.js"></script>
+    {% if jekyll.environment == "production" %}
+      <script defer src="https://analytics.arandilopez.dev/script.js" data-hash></script>
+      <script defer src="https://assets.onedollarstats.com/stonks.js"></script>
+    {% endif %}
   </head>
   <body class="bg-base-100 text-base-content tech-grid-bg min-h-screen flex flex-col antialiased selection:bg-primary/20 selection:text-primary">
     <a href="#main-content" class="skip-link">Skip to main content</a>
