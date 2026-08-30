@@ -59,8 +59,10 @@ permalink: /about/
       <div class="p-5 rounded-xl border border-base-300 bg-base-200/40 text-center flex flex-col items-center">
         <div class="mb-4">
           <img 
-            src="{{ '/assets/images/arandilopez.webp' | relative_url }}" 
-            alt="Arandi Lopez" 
+            src="{{ '/assets/images/arandilopez-profile.webp' | relative_url }}"
+            alt="Arandi Lopez"
+            width="512"
+            height="512"
             class="w-36 h-36 sm:w-44 sm:h-44 object-cover rounded-2xl border-2 border-base-300 hover:border-primary transition-colors shadow-md"
           />
         </div>
