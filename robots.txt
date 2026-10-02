@@ -2,7 +2,28 @@
 layout: null
 ---
 
-sitemap: {{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}
+User-agent: *
+Allow: /
 
-user-agent: EmailCollector
-disallow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+Sitemap: {{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}

@@ -16,7 +16,7 @@
 # These are used to personalize your new site.
 title: Arandi Lopez
 description: >- # this means to ignore newlines until "baseurl:"
-  This the personal blog of Arandi Lopez, a software engineer and web developer.
+  The personal site of Arandi Lopez, a software engineer and web developer.
   I write about web development, programming, and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arandilopez.me" # the base hostname & protocol for your site, e.g. http://example.com
@@ -50,6 +50,15 @@ plugins:
 # Pagination settings
 paginate: 5
 paginate_path: "/articles/page-:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author:
+        name: Arandi Lopez
+        url: "https://arandilopez.me/about/"
 
 include:
   - _redirects

@@ -1,7 +1,15 @@
 ---
 layout: page
 title: About | Arandi Lopez
+description: Learn about Arandi Lopez, a Mexico-based software engineer with 10+ years of experience in Ruby on Rails, Node.js, React, and software architecture.
 permalink: /about/
+seo:
+  type: Person
+  name: Arandi Lopez
+  links:
+    - https://github.com/arandilopez
+    - https://linkedin.com/in/arandi-lopez-550795198/
+    - https://twitter.com/arandilopez
 ---
 
 <div class="max-w-4xl mx-auto">
